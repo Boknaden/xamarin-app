@@ -1,0 +1,2 @@
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.WinPhone\ApplikasjonBoknaden.WinPhone.csproj;neutral
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.csproj;neutral

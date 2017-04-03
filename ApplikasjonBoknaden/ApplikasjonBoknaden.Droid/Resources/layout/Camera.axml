@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1"
+        android:background="@drawable/pexelsphoto">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout1">
+            <LinearLayout
+                android:background="#97004D"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/linearLayout2">
+                <ImageView
+                    android:src="@drawable/user"
+                    android:id="@+id/SettingsImage"
+                    android:clickable="true"
+                    android:foregroundTint="#00000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <android.support.v7.widget.CardView
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/cardView4">
+                    <TextView
+                        android:text="Ny bok"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textView4"
+                        android:gravity="center" />
+                </android.support.v7.widget.CardView>
+                <ImageView
+                    android:src="@drawable/settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/SettingsImage"
+                    android:clickable="true"
+                    android:foregroundTint="#00000000"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <TextView
+                android:text="Bilde"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:gravity="center" />
+            <android.support.v7.widget.CardView
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardView1"
+                android:layout_gravity="center">
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView1"
+                    android:adjustViewBounds="true" />
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout4">
+                <Button
+                    android:id="@+id/myButton"
+                    android:text="@string/openCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@layout/Purple_Button"
+                    style="@style/button_text" />
+                <Button
+                    android:text="Skan isbn nummer"
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@layout/Purple_Button"
+                    style="@style/button_text" />
+            </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="250.0dp"
+                android:layout_height="50.0dp"
+                android:id="@+id/cardView2"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardBackgroundColor="#ff97004d"
+                app:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                android:layout_gravity="center">
+                <EditText
+                    android:layout_width="180.0dp"
+                    android:layout_height="40.0dp"
+                    android:id="@+id/editTextISBNNumber"
+                    android:hint="ISBN"
+                    android:gravity="center"
+                    android:textColor="#101010"
+                    android:textColorHint="#7777"
+                    android:background="#ffff"
+                    android:layout_gravity="center" />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="250.0dp"
+                android:layout_height="50.0dp"
+                android:id="@+id/cardView2"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardBackgroundColor="#ff97004d"
+                app:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                android:layout_gravity="center">
+                <EditText
+                    android:id="@+id/editTextBokName"
+                    android:hint="Navn"
+                    android:layout_width="180.0dp"
+                    android:layout_height="40.0dp"
+                    android:gravity="center"
+                    android:background="#ffff"
+                    android:textColorHint="#7777"
+                    android:textColor="#101010"
+                    android:layout_gravity="center" />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="250.0dp"
+                android:layout_height="50.0dp"
+                android:id="@+id/cardView3"
+                android:layout_gravity="center"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardBackgroundColor="#ff97004d"
+                app:cardCornerRadius="@dimen/abc_action_bar_content_inset_material">
+                <EditText
+                    android:id="@+id/editText2"
+                    android:hint="Pris"
+                    android:layout_width="180.0dp"
+                    android:layout_height="40.0dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:layout_gravity="center"
+                    android:textColorHint="#7777"
+                    android:textColor="#101010" />
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Skole"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/textView2"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <TextView
+                    android:text="Fag"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/textViewtest"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60.0dp"
+                android:id="@+id/cardView2"
+                android:minWidth="25px"
+                android:minHeight="25px">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout7">
+                    <Spinner
+                        android:id="@+id/spinnerSchoolUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textAlignment="center" />
+                    <Spinner
+                        android:id="@+id/spinnerClassUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <Button
+                android:text="Publiser!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2"
+                android:background="@layout/Purple_Button"
+                style="@style/button_text" />
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:text="ISBN nummer"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:gravity="center" />
+</LinearLayout>

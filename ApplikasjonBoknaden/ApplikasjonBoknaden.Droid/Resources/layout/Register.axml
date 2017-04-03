@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="#97004D"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/linearLayout2">
+        <Space
+            android:layout_width="23.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/space1" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="59.0dp"
+        android:id="@+id/HeaderRelativeLayout"
+        android:background="#97004D"
+        android:layout_marginBottom="27.5dp">
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:id="@+id/HeaderButtonLeft"
+            android:layout_width="109.0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:id="@+id/HeaderButtonRight"
+            android:layout_width="109.0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:text="Login"
+            android:id="@+id/HeaderTextView"
+            android:textSize="@dimen/abc_action_bar_progress_bar_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

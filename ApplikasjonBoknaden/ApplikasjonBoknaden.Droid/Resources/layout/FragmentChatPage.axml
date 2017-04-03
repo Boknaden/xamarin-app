@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameLayout1"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout1">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@layout/Purple_Button">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:text="Mine samtaler"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#ffff" />
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v4.view.PagerTabStrip
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:background="#7777"
+                    android:textColor="#fff"
+                    android:id="@+id/pagerTabStrip1" />
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+    </FrameLayout>
+    <android.support.v7.widget.CardView xmlns:p7="http://schemas.android.com/apk/res-auto"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="280.0dp"
+        android:layout_height="64.0dp"
+        android:id="@+id/cardView1"
+        android:background="#ffff"
+        p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+        p7:cardBackgroundColor="#ff97004d"
+        android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="250.5dp"
+            android:layout_height="50.0dp"
+            android:id="@+id/linearLayout5"
+            android:background="#ffff"
+            android:layout_gravity="center">
+            <ImageView
+                android:src="@drawable/user"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView2" />
+            <EditText
+                android:inputType="textEmailAddress"
+                android:id="@+id/editTextUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColorHint="#3d3c3c"
+                android:hint="Brukernavn" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
