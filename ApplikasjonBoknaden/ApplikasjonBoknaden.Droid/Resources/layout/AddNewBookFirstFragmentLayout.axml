@@ -14,8 +14,8 @@
             android:minHeight="25px"
             android:id="@+id/cardViewScanner"
             p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-            p7:cardBackgroundColor="#ff97004d"
-            android:background="@layout/Purple_Button"
+            p7:cardBackgroundColor="@color/app_main_color"
+            android:background="@layout/Blue_Button"
             style="@style/button_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                         android:id="@+id/cardView1"
                         android:background="#ffff"
                         p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                        p7:cardBackgroundColor="#ff97004d"
+                        p7:cardBackgroundColor="@color/app_main_color"
                         android:layout_gravity="center_horizontal">
                         <LinearLayout
                             android:orientation="horizontal"
@@ -90,7 +90,7 @@
                         android:id="@+id/cardView1"
                         android:background="#ffff"
                         p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                        p7:cardBackgroundColor="#ff97004d"
+                        p7:cardBackgroundColor="@color/app_main_color"
                         android:layout_gravity="center_horizontal"
                         android:visibility="visible">
                         <LinearLayout
@@ -101,7 +101,7 @@
                             <Button
                                 android:text="Skan ISBN"
                                 android:id="@+id/ScanISBNButton"
-                                android:background="@layout/Purple_Button"
+                                android:background="@layout/Blue_Button"
                                 style="@style/button_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
@@ -151,7 +151,7 @@
                     <Button
                         android:text="Neste"
                         android:id="@+id/NextStepISBNScanButton"
-                        android:background="@layout/Purple_Button"
+                        android:background="@layout/Blue_Button"
                         style="@style/button_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -163,10 +163,10 @@
             android:minHeight="25px"
             android:id="@+id/cardViewISBNDescription"
             p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-            p7:cardBackgroundColor="#ff97004d"
+            p7:cardBackgroundColor="@color/app_main_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@layout/Purple_Button"
+            android:background="@layout/Blue_Button"
             style="@style/button_text"
             android:layout_centerInParent="true"
             android:visibility="gone">
@@ -195,7 +195,7 @@
                         android:id="@+id/cardView1"
                         android:background="#ffff"
                         p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                        p7:cardBackgroundColor="#ff97004d"
+                        p7:cardBackgroundColor="@color/app_main_color"
                         android:layout_gravity="center_horizontal">
                         <LinearLayout
                             android:orientation="horizontal"
@@ -222,7 +222,7 @@
                         android:id="@+id/cardView1"
                         android:background="#ffff"
                         p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                        p7:cardBackgroundColor="#ff97004d"
+                        p7:cardBackgroundColor="@color/app_main_color"
                         android:layout_gravity="center_horizontal"
                         android:visibility="visible">
                         <LinearLayout
@@ -243,7 +243,7 @@
                                 android:layout_width="188.0dp"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/BackToScannerImageButton"
-                                android:background="@layout/Purple_Button"
+                                android:background="@layout/Blue_Button"
                                 style="@style/button_text"
                                 android:layout_gravity="center" />
                         </LinearLayout>

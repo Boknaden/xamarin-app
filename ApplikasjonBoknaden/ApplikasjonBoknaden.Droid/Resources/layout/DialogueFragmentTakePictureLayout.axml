@@ -14,8 +14,8 @@
             android:minHeight="25px"
             android:id="@+id/cardViewMain"
             p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-            p7:cardBackgroundColor="#ff97004d"
-            android:background="@layout/Purple_Button"
+            p7:cardBackgroundColor="@color/app_main_color"
+            android:background="@layout/Blue_Button"
             style="@style/button_text"
             android:visibility="visible"
             android:layout_width="wrap_content"
@@ -42,8 +42,8 @@
                     android:minHeight="25px"
                     android:id="@+id/cardViewISBNDescription"
                     p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                    p7:cardBackgroundColor="#00000000"
-                    android:background="@layout/Purple_Button"
+                    p7:cardBackgroundColor="@color/white"
+                    android:background="@layout/Blue_Button"
                     style="@style/button_text"
                     android:visibility="gone"
                     android:layout_width="280.0dp"
@@ -76,7 +76,7 @@
                                     android:id="@+id/HeaderTextView"
                                     android:textSize="@dimen/abc_action_bar_progress_bar_size"
                                     android:gravity="center"
-                                    android:textColor="#ffff"
+                                    android:textColor="#101010"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1" />
@@ -93,13 +93,14 @@
                                     android:gravity="center"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                    android:layout_weight="1"
+                                    android:textColor="#101010" />
                                 <ImageButton
                                     android:src="@drawable/ic_close_dark"
                                     android:layout_width="188.0dp"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/BackToScannerImageButton"
-                                    android:background="@layout/Purple_Button"
+                                    android:background="@layout/Blue_Button"
                                     style="@style/button_text"
                                     android:layout_gravity="center" />
                             </LinearLayout>
@@ -111,8 +112,8 @@
                     android:minHeight="25px"
                     android:id="@+id/cardViewItemType"
                     p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                    p7:cardBackgroundColor="#00000000"
-                    android:background="@layout/Purple_Button"
+                    p7:cardBackgroundColor="@color/white"
+                    android:background="@layout/Blue_Button"
                     style="@style/button_text"
                     android:visibility="gone"
                     android:layout_width="280.0dp"
@@ -132,17 +133,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
-                                android:text="Velg type"
+                                android:text="Type?"
                                 android:id="@+id/HeaderTextView"
                                 android:textSize="@dimen/abc_action_bar_progress_bar_size"
                                 android:gravity="center"
-                                android:textColor="#ffff"
+                                android:textColor="#101010"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1" />
-                            <Space
-                                android:id="@+id/space1"
-                                android:layout_width="26.0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1" />
                         </LinearLayout>
@@ -169,7 +165,7 @@
                                 <Button
                                     android:text="Bok"
                                     android:id="@+id/SetItemAsBookButton"
-                                    android:background="@layout/Purple_Button"
+                                    android:background="@layout/Blue_Button"
                                     style="@style/button_text"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
@@ -177,7 +173,7 @@
                                 <Button
                                     android:text="Annet"
                                     android:id="@+id/SetItemAsOtherButton"
-                                    android:background="@layout/Purple_Button"
+                                    android:background="@layout/Blue_Button"
                                     style="@style/button_text"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
@@ -191,8 +187,8 @@
                     android:minHeight="25px"
                     android:id="@+id/cardViewScanner"
                     p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                    p7:cardBackgroundColor="#00000000"
-                    android:background="@layout/Purple_Button"
+                    p7:cardBackgroundColor="@color/white"
+                    android:background="@layout/Blue_Button"
                     style="@style/button_text"
                     android:visibility="gone"
                     android:layout_width="280.0dp"
@@ -223,11 +219,11 @@
                                 android:minWidth="25px"
                                 android:minHeight="25px">
                                 <TextView
-                                    android:text="Ny bok"
+                                    android:text="ISBN"
                                     android:id="@+id/HeaderTextView"
                                     android:textSize="@dimen/abc_action_bar_progress_bar_size"
                                     android:gravity="center"
-                                    android:textColor="#ffff"
+                                    android:textColor="#101010"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1" />
@@ -244,7 +240,7 @@
                                 <Button
                                     android:text="Skan ISBN"
                                     android:id="@+id/ScanISBNButton"
-                                    android:background="@layout/Purple_Button"
+                                    android:background="@layout/Blue_Button"
                                     style="@style/button_text"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
@@ -255,7 +251,8 @@
                                     android:gravity="center"
                                     android:layout_width="match_parent"
                                     android:layout_height="31.5dp"
-                                    android:enabled="true" />
+                                    android:enabled="true"
+                                    android:textColor="#101010" />
                                 <EditText
                                     android:id="@+id/ManualISBNInputEditText"
                                     android:gravity="center"
@@ -279,7 +276,8 @@
                                         android:id="@+id/ISBNDescriptionLink"
                                         android:gravity="center"
                                         android:layout_width="match_parent"
-                                        android:layout_height="32.5dp" />
+                                        android:layout_height="32.5dp"
+                                        android:textColor="#101010" />
                                 </LinearLayout>
                                 <Space
                                     android:layout_width="match_parent"
@@ -294,8 +292,8 @@
                     android:minHeight="25px"
                     android:id="@+id/cardViewPicture"
                     p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                    p7:cardBackgroundColor="#00000000"
-                    android:background="@layout/Purple_Button"
+                    p7:cardBackgroundColor="@color/white"
+                    android:background="@layout/Blue_Button"
                     style="@style/button_text"
                     android:visibility="gone"
                     android:layout_width="280.0dp"
@@ -319,7 +317,7 @@
                                 android:id="@+id/HeaderTextView"
                                 android:textSize="@dimen/abc_action_bar_progress_bar_size"
                                 android:gravity="center"
-                                android:textColor="#ffff"
+                                android:textColor="#101010"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1" />
@@ -348,40 +346,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="9.0dp"
                             android:id="@+id/space1" />
-                        <android.support.v7.widget.CardView
-                            android:minWidth="25px"
-                            android:minHeight="25px"
-                            android:layout_width="280.0dp"
-                            android:layout_height="61.5dp"
-                            android:id="@+id/cardView1"
-                            android:background="#ffff"
-                            p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                            p7:cardBackgroundColor="#ff97004d"
-                            android:layout_gravity="center_horizontal"
-                            android:visibility="visible">
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:id="@+id/linearLayout3"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:minWidth="25px"
-                                    android:minHeight="25px"
-                                    android:id="@+id/linearLayout5"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
-                                    <Button
-                                        android:text="Ta bilde"
-                                        android:id="@+id/TakePictureButton"
-                                        android:background="@layout/Purple_Button"
-                                        style="@style/button_text"
-                                        android:layout_width="115.0dp"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1" />
-                                </LinearLayout>
-                            </LinearLayout>
-                        </android.support.v7.widget.CardView>
+                        <Button
+                            android:text="Ta bilde"
+                            android:id="@+id/TakePictureButton"
+                            android:background="@layout/Blue_Button"
+                            style="@style/button_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
@@ -389,12 +360,12 @@
                     android:minHeight="25px"
                     android:id="@+id/cardViewLast"
                     p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                    p7:cardBackgroundColor="#00000000"
-                    android:background="@layout/Purple_Button"
+                    p7:cardBackgroundColor="@color/white"
+                    android:background="@layout/Blue_Button"
                     style="@style/button_text"
-                    android:visibility="visible"
-                    android:layout_width="280.0dp"
-                    android:layout_height="255.0dp">
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                     <LinearLayout
                         android:orientation="vertical"
                         android:minWidth="25px"
@@ -405,11 +376,11 @@
                         android:layout_weight="1"
                         android:layout_gravity="center">
                         <TextView
-                            android:text="siste touch"
+                            android:text="produkt Info"
                             android:id="@+id/HeaderTextView"
                             android:textSize="@dimen/abc_action_bar_progress_bar_size"
                             android:gravity="center"
-                            android:textColor="#ffff"
+                            android:textColor="#101010"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
@@ -417,86 +388,402 @@
                             android:id="@+id/space3"
                             android:layout_width="match_parent"
                             android:layout_height="10.0dp" />
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:id="@+id/linearLayout3"
-                            android:gravity="center"
-                            android:background="@layout/Purple_Button"
-                            android:layout_width="250.0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center">
-                            <EditText
-                                android:id="@+id/ManualISBNInputEditText"
-                                android:gravity="center"
-                                android:hint="Navn eller beskrivelse"
+                        <android.support.v7.widget.CardView
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:layout_width="280.0dp"
+                            android:layout_height="64.0dp"
+                            android:id="@+id/cardView1"
+                            android:background="#ffff"
+                            p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                            p7:cardBackgroundColor="@color/white"
+                            android:layout_gravity="center_horizontal">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:minWidth="25px"
+                                android:minHeight="25px"
+                                android:layout_width="250.5dp"
+                                android:layout_height="50.0dp"
+                                android:id="@+id/linearLayout5"
                                 android:background="#ffff"
-                                android:layout_width="230.0dp"
-                                android:layout_height="match_parent"
-                                android:textColorHint="#777"
-                                android:textColor="#101010" />
-                        </LinearLayout>
+                                android:layout_gravity="center">
+                                <EditText
+                                    android:inputType="textEmailAddress"
+                                    android:id="@+id/ProductNameText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#3d3c3c"
+                                    android:hint="Navn..."
+                                    android:textColor="#101010" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <Space
+                            android:id="@+id/space3"
+                            android:layout_width="match_parent"
+                            android:layout_height="5.0dp" />
+                        <android.support.v7.widget.CardView
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:layout_width="280.0dp"
+                            android:layout_height="64.0dp"
+                            android:id="@+id/cardView1"
+                            android:background="#ffff"
+                            p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                            p7:cardBackgroundColor="@color/white"
+                            android:layout_gravity="center_horizontal">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:minWidth="25px"
+                                android:minHeight="25px"
+                                android:layout_width="250.5dp"
+                                android:layout_height="50.0dp"
+                                android:id="@+id/linearLayout5"
+                                android:background="#ffff"
+                                android:layout_gravity="center">
+                                <EditText
+                                    android:inputType="textEmailAddress"
+                                    android:id="@+id/ProductDescriptionText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#3d3c3c"
+                                    android:hint="Beskrivelse..."
+                                    android:textColor="#101010" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <Space
+                            android:id="@+id/space3"
+                            android:layout_width="match_parent"
+                            android:layout_height="5.0dp" />
+                        <android.support.v7.widget.CardView
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:layout_width="280.0dp"
+                            android:layout_height="64.0dp"
+                            android:id="@+id/cardView1"
+                            android:background="#ffff"
+                            p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                            p7:cardBackgroundColor="@color/white"
+                            android:layout_gravity="center_horizontal">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:minWidth="25px"
+                                android:minHeight="25px"
+                                android:layout_width="250.5dp"
+                                android:layout_height="50.0dp"
+                                android:id="@+id/linearLayout5"
+                                android:background="#ffff"
+                                android:layout_gravity="center">
+                                <EditText
+                                    android:inputType="textEmailAddress"
+                                    android:id="@+id/ProductPriceText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#3d3c3c"
+                                    android:hint="Pris..."
+                                    android:textColor="#101010" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/cardViewPublish"
+                    p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                    p7:cardBackgroundColor="@color/white"
+                    android:background="@layout/Blue_Button"
+                    style="@style/button_text"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/linearLayout4"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:text="Ekstra info"
+                            android:id="@+id/HeaderTextView"
+                            android:textSize="@dimen/abc_action_bar_progress_bar_size"
+                            android:gravity="center"
+                            android:textColor="#101010"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+                        <Space
+                            android:id="@+id/space3"
+                            android:layout_width="match_parent"
+                            android:layout_height="10.0dp" />
+                        <TextView
+                            android:text="Skole"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/textView4"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#101010" />
+                        <android.support.v7.widget.CardView
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:layout_width="280.0dp"
+                            android:layout_height="64.0dp"
+                            android:id="@+id/cardView1"
+                            android:background="#ffff"
+                            p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                            p7:cardBackgroundColor="@color/white"
+                            android:layout_gravity="center_horizontal">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:minWidth="25px"
+                                android:minHeight="25px"
+                                android:layout_width="250.5dp"
+                                android:layout_height="50.0dp"
+                                android:id="@+id/linearLayout5"
+                                android:background="#ffff"
+                                android:layout_gravity="center">
+                                <Spinner
+                                    android:id="@+id/spinnerClassUpload"
+                                    android:background="#ffff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <TextView
+                            android:text="Campus"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/textView4"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#101010" />
+                        <android.support.v7.widget.CardView
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:layout_width="280.0dp"
+                            android:layout_height="64.0dp"
+                            android:id="@+id/cardView1"
+                            android:background="#ffff"
+                            p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                            p7:cardBackgroundColor="@color/white"
+                            android:layout_gravity="center_horizontal">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:minWidth="25px"
+                                android:minHeight="25px"
+                                android:layout_width="250.5dp"
+                                android:layout_height="50.0dp"
+                                android:id="@+id/linearLayout5"
+                                android:background="#ffff"
+                                android:layout_gravity="center">
+                                <Spinner
+                                    android:id="@+id/spinnerSchoolUpload"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35.0dp"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+                                    android:background="#ffff" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <TextView
+                            android:text="Linje"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/textView4"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#101010" />
+                        <android.support.v7.widget.CardView
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:layout_width="280.0dp"
+                            android:layout_height="64.0dp"
+                            android:id="@+id/cardView1"
+                            android:background="#ffff"
+                            p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                            p7:cardBackgroundColor="@color/white"
+                            android:layout_gravity="center_horizontal">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:minWidth="25px"
+                                android:minHeight="25px"
+                                android:layout_width="250.5dp"
+                                android:layout_height="50.0dp"
+                                android:id="@+id/linearLayout5"
+                                android:background="#ffff"
+                                android:layout_gravity="center">
+                                <Spinner
+                                    android:id="@+id/spinnerClassUpload"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35.0dp"
+                                    android:layout_weight="1"
+                                    android:background="#ffff"
+                                    android:layout_gravity="center" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
                         <Space
                             android:id="@+id/space3"
                             android:layout_width="match_parent"
                             android:layout_height="25.0dp" />
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:id="@+id/linearLayout3"
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/cardViewAds"
+                    p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                    p7:cardBackgroundColor="@color/white"
+                    style="@style/button_text"
+                    android:visibility="visible"
+                    android:layout_width="350.0dp"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/linearLayout4"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:text="Annonse"
+                            android:id="@+id/HeaderTextView"
+                            android:textSize="@dimen/abc_action_bar_progress_bar_size"
                             android:gravity="center"
-                            android:background="@layout/Purple_Button"
-                            android:layout_width="250.0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center">
-                            <EditText
-                                android:id="@+id/ManualISBNInputEditText"
-                                android:gravity="center"
-                                android:hint="pris"
-                                android:background="#ffff"
-                                android:layout_width="230.0dp"
-                                android:layout_height="match_parent"
-                                android:textColorHint="#777"
-                                android:textColor="#101010" />
-                        </LinearLayout>
-                        <Space
-                            android:id="@+id/space3"
+                            android:textColor="#101010"
                             android:layout_width="match_parent"
-                            android:layout_height="25.0dp" />
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:id="@+id/linearLayout7"
-                            android:background="@layout/Purple_Button"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+                        <android.support.v7.widget.CardView
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:layout_width="280.0dp"
+                            android:layout_height="64.0dp"
+                            android:id="@+id/cardView1"
+                            android:background="#ffff"
+                            p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                            p7:cardBackgroundColor="@color/white"
+                            android:layout_gravity="center_horizontal">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:minWidth="25px"
+                                android:minHeight="25px"
+                                android:layout_width="250.5dp"
+                                android:layout_height="50.0dp"
+                                android:id="@+id/linearLayout5"
+                                android:background="#ffff"
+                                android:layout_gravity="center">
+                                <EditText
+                                    android:inputType="textEmailAddress"
+                                    android:id="@+id/AdPackNameText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#3d3c3c"
+                                    android:hint="Tittel..."
+                                    android:textColor="#101010" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5.0dp"
+                            android:id="@+id/space4" />
+                        <android.support.v7.widget.CardView
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:layout_width="280.0dp"
+                            android:layout_height="64.0dp"
+                            android:id="@+id/cardView1"
+                            android:background="@color/white"
+                            p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                            p7:cardBackgroundColor="@color/white"
+                            android:layout_gravity="center_horizontal">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:minWidth="25px"
+                                android:minHeight="25px"
+                                android:layout_width="250.5dp"
+                                android:layout_height="50.0dp"
+                                android:id="@+id/linearLayout5"
+                                android:background="@color/white"
+                                android:layout_gravity="center">
+                                <EditText
+                                    android:inputType="textEmailAddress"
+                                    android:id="@+id/AdPackDescriptionText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#3d3c3c"
+                                    android:hint="Beskrivelse..."
+                                    android:textColor="#101010" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/space7" />
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5.0dp"
+                            android:id="@+id/space6" />
+                        <android.support.v7.widget.CardView
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:id="@+id/cardView1"
+                            android:background="#ffff"
+                            p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                            p7:cardBackgroundColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
-                            <Spinner
-                                android:id="@+id/spinnerSchoolUpload"
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:minWidth="25px"
+                                android:minHeight="25px"
                                 android:layout_width="match_parent"
-                                android:layout_height="35.0dp"
-                                android:layout_weight="1"
-                                android:textAlignment="center"
-                                android:layout_gravity="center"
-                                android:background="#ffff" />
-                            <Space
-                                android:layout_width="10.0dp"
                                 android:layout_height="match_parent"
-                                android:id="@+id/space2" />
-                            <Spinner
-                                android:id="@+id/spinnerClassUpload"
+                                android:id="@+id/linearLayout7" />
+                            <ScrollView
+                                android:minWidth="25px"
+                                android:minHeight="25px"
+                                android:id="@+id/scrollView2"
                                 android:layout_width="match_parent"
-                                android:layout_height="35.0dp"
-                                android:layout_weight="1"
-                                android:background="#ffff"
-                                android:layout_gravity="center" />
-                            <Space
-                                android:id="@+id/space3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent" />
-                        </LinearLayout>
+                                android:layout_height="200.0dp"
+                                android:layout_gravity="center">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:minWidth="25px"
+                                    android:minHeight="25px"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/AdDisplayer" />
+                            </ScrollView>
+                        </android.support.v7.widget.CardView>
+                        <Button
+                            android:text="Nytt produkt"
+                            android:id="@+id/NewProductButton"
+                            android:background="@layout/Blue_Button"
+                            style="@style/button_text"
+                            android:layout_width="250.0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <Button
                     android:text="Neste"
                     android:id="@+id/NextStepButtonNew"
-                    android:background="@layout/Purple_Button"
+                    android:background="@layout/Blue_Button"
                     style="@style/button_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />

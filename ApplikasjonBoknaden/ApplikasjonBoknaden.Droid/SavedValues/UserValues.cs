@@ -14,28 +14,37 @@ namespace ApplikasjonBoknaden.Droid.SavedValues
         /// <param name="sPEditor"></param>
         public static void SaveNewUserValues(UserOld newUser, ISharedPreferencesEditor sPEditor)
         {
+
+            saveStringPrefs(AndroidJsonHelper.UserValuesEnums.userid.ToString(), newUser.UserID, sPEditor);
             saveStringPrefs(AndroidJsonHelper.UserValuesEnums.firstname.ToString(), newUser.Firstname, sPEditor);
             saveStringPrefs(AndroidJsonHelper.UserValuesEnums.lastname.ToString(), newUser.Lastname, sPEditor);
             saveStringPrefs(AndroidJsonHelper.UserValuesEnums.email.ToString(), newUser.Email, sPEditor);
             saveStringPrefs(AndroidJsonHelper.UserValuesEnums.username.ToString(), newUser.Username, sPEditor);
+            saveStringPrefs(AndroidJsonHelper.UserValuesEnums.verified.ToString(), newUser.verified, sPEditor);
             saveStringPrefs("Password", newUser.Password, sPEditor);
             saveStringPrefs("Token", newUser.Token, sPEditor);
         }
 
-        public static string GetSavedUsername(ISharedPreferences sP)
+        public static string GetValueFromToken(ISharedPreferences sP, AndroidJsonHelper.UserValuesEnums type)
         {
-            return getStringPrefs(AndroidJsonHelper.UserValuesEnums.username.ToString(), sP);
+            string tokenvalue = "";
+            if (GetSavedToken(sP) != string.Empty)
+            {
+                tokenvalue = AndroidJsonHelper.GetValueFromToken(GetSavedToken(sP), type);
+            }else
+            {
+                tokenvalue = string.Empty;
+            }
+
+            return tokenvalue;
         }
 
-        public static string GetSavedFirstName(ISharedPreferences sP)
+        public static void SaveToken(ISharedPreferencesEditor sPE, string token)
         {
-            return getStringPrefs(AndroidJsonHelper.UserValuesEnums.firstname.ToString(), sP);
+         
+            saveStringPrefs("Token", token, sPE);
         }
 
-        public static string GetSavedLastName(ISharedPreferences sP)
-        {
-            return getStringPrefs(AndroidJsonHelper.UserValuesEnums.lastname.ToString(), sP);
-        }
         public static string GetSavedToken(ISharedPreferences sP)
         {
             return getStringPrefs("Token", sP);
@@ -44,12 +53,13 @@ namespace ApplikasjonBoknaden.Droid.SavedValues
         public static UserOld GetSavedUserValues(ISharedPreferences sP)
         {
             UserOld U = new UserOld();
-            U.Firstname = getStringPrefs(AndroidJsonHelper.UserValuesEnums.firstname.ToString(), sP);
-            U.Lastname = getStringPrefs(AndroidJsonHelper.UserValuesEnums.lastname.ToString(), sP);
-            U.Email = getStringPrefs(AndroidJsonHelper.UserValuesEnums.email.ToString(), sP);
-            U.Username = getStringPrefs(AndroidJsonHelper.UserValuesEnums.username.ToString(), sP);
+            U.Firstname = GetValueFromToken(sP, AndroidJsonHelper.UserValuesEnums.firstname);
+            U.Firstname = GetValueFromToken(sP, AndroidJsonHelper.UserValuesEnums.firstname);
+            U.Lastname = GetValueFromToken(sP, AndroidJsonHelper.UserValuesEnums.lastname);
+            U.Email = GetValueFromToken(sP, AndroidJsonHelper.UserValuesEnums.email);
+            U.Username = GetValueFromToken(sP, AndroidJsonHelper.UserValuesEnums.username);
+            U.Token = GetSavedToken(sP);
             U.Password = getStringPrefs("Password", sP);
-            U.Token = getStringPrefs("Token", sP);
             return U;
         }
 

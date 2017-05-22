@@ -24,7 +24,7 @@
                 android:id="@+id/linearLayout5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@layout/Purple_Button">
+                android:background="@layout/Background_Blue">
                 <LinearLayout
                     android:orientation="vertical"
                     android:minWidth="25px"
@@ -54,6 +54,7 @@
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/transparent"
                 android:layout_weight="1">
                 <android.support.v4.view.PagerTabStrip
                     android:layout_width="match_parent"
@@ -61,8 +62,8 @@
                     android:layout_gravity="top"
                     android:paddingBottom="10dp"
                     android:paddingTop="10dp"
-                    android:background="#7777"
-                    android:textColor="#fff"
+                    android:background="@color/transparent"
+                    android:textColor="@color/white"
                     android:id="@+id/pagerTabStrip1" />
             </android.support.v4.view.ViewPager>
             <Button
@@ -70,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/LogOutUserbutton"
-                android:background="@layout/Purple_Button"
+                android:background="@layout/Blue_Button"
                 style="@style/button_text" />
         </LinearLayout>
     </FrameLayout>

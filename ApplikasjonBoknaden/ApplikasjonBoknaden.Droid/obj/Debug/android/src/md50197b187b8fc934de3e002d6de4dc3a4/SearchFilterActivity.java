@@ -2,7 +2,7 @@ package md50197b187b8fc934de3e002d6de4dc3a4;
 
 
 public class SearchFilterActivity
-	extends md5f62a2229ea213c5fdf30c20d749a8a8a.CustomDialogActivity
+	extends md5f62a2229ea213c5fdf30c20d749a8a8a.CustomDialogFragment
 	implements
 		mono.android.IGCUserPeer
 {

@@ -9,18 +9,7 @@ namespace ApplikasjonBoknaden.Droid.AndroidJsonHelpers
 {
     public static class AndroidJsonHelper
     {
-
-        public enum UserValuesEnums { userid, username, firstname, lastname, email, exp };
-
-
-        public static string CleansedToken(string token)
-        {
-            //removes the start of the token string
-            token = token.Substring(25);
-            //Removes the end of the token string
-            token = token.Remove(token.Length - 2);
-            return token;
-        }
+        public enum UserValuesEnums { userid, username, firstname, lastname, email, exp, verified };
 
         /// <summary>
         /// Cleans the given token and gets user values from it.
@@ -30,7 +19,7 @@ namespace ApplikasjonBoknaden.Droid.AndroidJsonHelpers
         {
             string value = "";
             var handler = new JwtSecurityTokenHandler();
-            var jsonToken = handler.ReadToken(CleansedToken(token)) as JwtSecurityToken;
+            var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
             value = jsonToken.Claims.First(claim => claim.Type == uservalue.ToString()).Value;
             Console.WriteLine(value);
             return value;

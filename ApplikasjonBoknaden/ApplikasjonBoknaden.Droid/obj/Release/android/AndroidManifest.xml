@@ -5,12 +5,13 @@
   <uses-permission android:name="android.permission.CAMERA" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.INTERNET" />
   <uses-feature android:name="android.hardware.camera" />
   <uses-feature android:name="android.hardware.camera.autofocus" />
   <application android:label="ApplikasjonBoknaden.Droid" android:name="android.app.Application" android:allowBackup="true">
-    <activity android:label="LoginActivity" android:name="md50197b187b8fc934de3e002d6de4dc3a4.LoginActivity" />
-    <activity android:label="LoginActivity" android:name="md50197b187b8fc934de3e002d6de4dc3a4.MainMenuActivity" />
-    <activity android:icon="@drawable/icon" android:label="ApplikasjonBoknaden.Droid" android:noHistory="true" android:name="md50197b187b8fc934de3e002d6de4dc3a4.MainActivity">
+    <activity android:label="LoginActivity" android:screenOrientation="portrait" android:name="md50197b187b8fc934de3e002d6de4dc3a4.LoginActivity" />
+    <activity android:screenOrientation="portrait" android:name="md50197b187b8fc934de3e002d6de4dc3a4.MainMenuActivity" />
+    <activity android:icon="@drawable/icon" android:label="ApplikasjonBoknaden.Droid" android:noHistory="true" android:screenOrientation="portrait" android:name="md50197b187b8fc934de3e002d6de4dc3a4.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

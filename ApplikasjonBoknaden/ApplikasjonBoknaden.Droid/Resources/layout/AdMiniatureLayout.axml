@@ -7,60 +7,144 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="170.0dp"
-        android:id="@+id/relativeLayout1">
-        <ImageView
-            android:src="@drawable/birch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/AdPack_ImageView"
-            android:layout_centerInParent="true"
-            android:scaleType="fitXY" />
+        android:layout_height="200.0dp"
+        android:id="@+id/relativeLayout1"
+        android:visibility="visible">
+        <Button
+            android:layout_width="match_parent"
+            android:background="@color/transparent"
+            android:layout_height="match_parent"
+            android:id="@+id/AdPack_button" />
         <LinearLayout
             android:orientation="vertical"
             android:minWidth="25px"
             android:minHeight="25px"
-            android:id="@+id/AdPack_TextFogBackground"
-            android:background="#9999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout7">
+            <ImageView
+                android:src="@drawable/pexelsphoto"
+                android:id="@+id/AdPack_ImageView"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="200.0dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/linearLayout5"
+            android:background="@color/semitransparent_black"
+            android:paddingRight="10.0dp"
+            android:paddingLeft="10.0dp"
+            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/AdPack_TextFogBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout_AdPack_DateAndName"
+                    android:visibility="visible">
+                    <TextView
+                        android:text="Pakke for IT studenter"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/AdPack_PackNameText"
+                        android:textColor="#ffff"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:text="Eiriks0"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/AdPack_SellerText"
+                        android:textColor="#ffff"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
                 android:minWidth="25px"
                 android:minHeight="25px"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/linearLayout3">
+                android:id="@+id/linearLayout_AdPack_DateAndName"
+                android:visibility="visible">
                 <TextView
-                    android:text="Pris 350"
+                    android:text="Totalt:"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:id="@+id/AdPack_PriceText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/space4" />
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/space3"
-                    android:layout_weight="1" />
-                <TextView
-                    android:text="Eiriks0"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
                     android:id="@+id/AdPack_SellerText"
-                    android:textColor="#ffff" />
+                    android:textColor="#ffff"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+                <TextView
+                    android:text="350,-"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/AdPack_PriceText"
+                    android:textColor="@color/price_green"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
             </LinearLayout>
-            <TextView
-                android:text="Pakke for IT studenter"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/linearLayout_AdItem_Description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fafafa"
+                android:layout_weight="1"
+                android:visibility="gone">
+                <TextView
+                    android:text="Av Viggo Holmstedt. Denne boken inneholder mye informasjon om forskjellige bøker"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/AdPack_AdItemDescription_Textview"
+                    android:textColor="#999"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/linearLayout3"
+                android:background="@color/app_main_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/AdPack_PackNameText" />
+                android:layout_gravity="right"
+                android:visibility="gone">
+                <Button
+                    android:text="Meld interesse"
+                    android:id="@+id/ShowInterestButton"
+                    android:background="@layout/Blue_Button"
+                    style="@style/button_text"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40.0dp" />
+            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

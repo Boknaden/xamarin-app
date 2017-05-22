@@ -5,7 +5,7 @@
   <xs:import schemaLocation="schemas.android.com.tools.xsd" namespace="http://schemas.android.com/tools" />
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>16/03/2017 20:54:12</xs:documentation>
+    <xs:documentation>08/05/2017 15:42:14</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -137,7 +137,7 @@
       <xs:element ref="android.support.v7.widget.Toolbar" />
       <xs:element ref="android.support.v7.widget.RecyclerView" />
       <xs:element ref="android.support.v7.app.MediaRouteButton" />
-      <xs:element ref="ApplikasjonBoknaden.Droid.DynamicView" />
+      <xs:element ref="ApplikasjonBoknaden.Droid.AdItemClasses.AdMiniature" />
     </xs:choice>
   </xs:group>
   <xs:element name="CheckedTextView" type="CheckedTextView">
@@ -2156,14 +2156,14 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="ApplikasjonBoknaden.Droid.DynamicView" type="ApplikasjonBoknaden.Droid.DynamicView">
+  <xs:element name="ApplikasjonBoknaden.Droid.AdItemClasses.AdMiniature" type="ApplikasjonBoknaden.Droid.AdItemClasses.AdMiniature">
     <xs:annotation>
-      <xs:documentation>Runtime Type: ApplikasjonBoknaden.Droid.DynamicView</xs:documentation>
+      <xs:documentation>Runtime Type: ApplikasjonBoknaden.Droid.AdItemClasses.AdMiniature</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="ApplikasjonBoknaden.Droid.DynamicView">
+  <xs:complexType name="ApplikasjonBoknaden.Droid.AdItemClasses.AdMiniature">
     <xs:complexContent mixed="false">
-      <xs:extension base="LinearLayout" />
+      <xs:extension base="RelativeLayout" />
     </xs:complexContent>
   </xs:complexType>
 </xs:schema>

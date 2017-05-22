@@ -1,16 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V4.App;
 using Android.Graphics.Drawables;
 using Android.Graphics;
 /// <summary>
@@ -19,12 +11,11 @@ using Android.Graphics;
 namespace ApplikasjonBoknaden.Droid.DialogFragments.CostumParent
 {
     [Activity(MainLauncher = true)]
-    public class CustomDialogActivity : Android.Support.V4.App.DialogFragment
+    public class CustomDialogFragment : Android.Support.V4.App.DialogFragment
     {
-        Button Button_Dismiss;
         protected CustomFragmentActivity CallerActivity = null;
         protected View Dialogueview = null;
-
+        Button Button_Dismiss;
 
         /// <summary>
         /// New show, used to also set the CallerActivity.
@@ -37,26 +28,23 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments.CostumParent
             this.CallerActivity = caller;
             base.Show(manager, tag);
         }
-
-        protected virtual void ShowToast(string message)
+        /// <summary>
+        /// How a normal PopupdialogueFragment
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="showCheckMark"></param>
+        protected virtual void ShowToast(string message, Boolean showCheckMark = false)
         {
-            Toast.MakeText(CallerActivity, message, ToastLength.Long).Show();
+            PoppupDialogueFragment APDF = new PoppupDialogueFragment();
+            APDF.Show(CallerActivity.SupportFragmentManager, "dialog", CallerActivity, message, showCheckMark);
+            //Toast.MakeText(CallerActivity, message, ToastLength.Long).Show();
         }
-
         public override Android.Views.View OnCreateView(Android.Views.LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Android 3.x+ still wants to show title: disable
             Dialog.Window.RequestFeature(WindowFeatures.NoTitle);
-
-         //  View view = InitiateFragment(inflater, container);
-
-            // Create our view
             var view = inflater.Inflate(LayoutSetter(), container, true);
             Dialogueview = view;
-
-            // Handle dismiss button click
-            //  //Button_Dismiss = view.FindViewById<Button>(Resource.Id.Button_Dismiss);
-            //  Button_Dismiss.Click += Button_Dismiss_Click;
             InitiateFragment();
             return view;
         }
@@ -75,38 +63,28 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments.CostumParent
         {
             return Resource.Layout.DialogueFragmentRegisterUserLayout;
         }
-
         public override void OnResume()
         {
-            // Auto size the dialog based on it's contents
             Dialog.Window.SetLayout(LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.MatchParent);
-
-            // Make sure there is no background behind our view
             Dialog.Window.SetBackgroundDrawable(new ColorDrawable(Color.Transparent));
-
-            // Disable standard dialog styling/frame/theme: our custom view should create full UI
             SetStyle(Android.Support.V4.App.DialogFragment.StyleNoFrame, Android.Resource.Style.Theme);
-
             base.OnResume();
         }
 
+        /// <summary>
+        /// Close this DialogueFragment
+        /// </summary>
         protected virtual void CloseFragment()
         {
             Dismiss();
         }
-
-     //   private void Button_Dismiss_Click(object sender, EventArgs e)
-     //   {
-     //       Dismiss();
-    //    }
-
+        /// <summary>
+        /// Disposes this fragment
+        /// </summary>
+        /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
-
-            // Unwire event
-          //  if (disposing)
-            //    Button_Dismiss.Click -= Button_Dismiss_Click;
         }
     }
 }

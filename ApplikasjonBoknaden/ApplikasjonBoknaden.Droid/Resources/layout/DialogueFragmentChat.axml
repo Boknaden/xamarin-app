@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1">
+        <ScrollView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/scrollView1"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffff"
+            android:layout_below="@id/linearLayout8">
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout_ChatBubles"
+                android:layout_weight="1"
+                android:paddingBottom="50.0dp" />
+        </ScrollView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout9" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dp"
+            android:id="@+id/linearLayout8"
+            android:background="@layout/Background_Blue">
+            <ImageView
+                android:src="@drawable/ic_close_light"
+                android:id="@+id/ImageViewCardClose"
+                android:clickable="true"
+                android:foregroundTint="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/linearLayout5"
+            android:background="#ffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <EditText
+                android:inputType="textEmailAddress"
+                android:id="@+id/editTextEmailLogin"
+                android:ellipsize="none"
+                android:hint="Skriv melding..."
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#0f0f0f"
+                android:textColorHint="#3d3c3c"
+                android:gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

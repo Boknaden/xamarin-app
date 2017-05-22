@@ -3,157 +3,166 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="landscape"
+    android:configChanges="keyboardHidden|orientation|screenSize"
     android:background="@drawable/pexelsphoto">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="130.0dp"
-        android:gravity="center"
-        android:id="@+id/linearLayout2"
+    <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
-        android:background="#97004D"
-        android:layout_weight="1">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            android:id="@+id/imageView1"
-            android:src="@drawable/boknadenburgunder" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/linearLayoutLogoHeader"
+            android:paddingTop="5.0dp"
+            android:paddingBottom="5.0dp"
+            android:background="@layout/Background_Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="50.0dp">
+            <ImageView
+                android:scaleType="fitCenter"
+                android:id="@+id/imageView1"
+                android:src="@drawable/logohvit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
         <ScrollView
             android:minWidth="25px"
             android:minHeight="25px"
             android:id="@+id/scrollView1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/linearLayout1"
+            android:layout_below="@+id/linearLayoutLogoHeader">
+            <RelativeLayout
                 android:minWidth="25px"
                 android:minHeight="25px"
-                android:layout_gravity="center"
-                android:gravity="center">
-                <android.support.v7.widget.CardView xmlns:p7="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeLayout2"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:orientation="vertical"
                     android:minWidth="25px"
                     android:minHeight="25px"
-                    android:layout_width="350.5dp"
-                    android:layout_height="64.0dp"
-                    android:id="@+id/cardView1"
-                    android:background="#ffff"
-                    p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                    p7:cardBackgroundColor="#ff97004d">
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true">
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="100.0dp"
+                        android:id="@+id/space1" />
+                    <android.support.v7.widget.CardView xmlns:p7="http://schemas.android.com/apk/res-auto"
                         android:minWidth="25px"
                         android:minHeight="25px"
-                        android:layout_width="250.5dp"
-                        android:layout_height="50.0dp"
-                        android:id="@+id/linearLayout5"
+                        android:layout_width="350.5dp"
+                        android:layout_height="64.0dp"
+                        android:id="@+id/cardView1"
                         android:background="#ffff"
+                        p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                        p7:cardBackgroundColor="@color/white"
                         android:layout_gravity="center">
-                        <ImageView
-                            android:src="@drawable/user"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:id="@+id/imageView2" />
-                        <EditText
-                            android:inputType="textEmailAddress"
-                            android:id="@+id/editTextEmailLogin"
-                            android:ellipsize="none"
-                            android:hint="E-post"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:textColor="#0f0f0f"
-                            android:textColorHint="#3d3c3c" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="10.0dp"
-                    android:id="@+id/space1" />
-                <android.support.v7.widget.CardView xmlns:p7="http://schemas.android.com/apk/res-auto"
-                    android:minWidth="25px"
-                    android:minHeight="25px"
-                    android:id="@+id/cardView1"
-                    android:layout_width="350.5dp"
-                    android:layout_height="64.0dp"
-                    p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
-                    p7:cardBackgroundColor="#ff97004d">
-                    <LinearLayout
-                        android:orientation="horizontal"
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:layout_width="250.5dp"
+                            android:layout_height="50.0dp"
+                            android:id="@+id/linearLayout5"
+                            android:background="#ffff"
+                            android:layout_gravity="center">
+                            <EditText
+                                android:inputType="textEmailAddress"
+                                android:id="@+id/editTextEmailLogin"
+                                android:ellipsize="none"
+                                android:hint="E-post"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="#0f0f0f"
+                                android:textColorHint="#3d3c3c"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10.0dp"
+                        android:id="@+id/space1" />
+                    <android.support.v7.widget.CardView xmlns:p7="http://schemas.android.com/apk/res-auto"
                         android:minWidth="25px"
                         android:minHeight="25px"
-                        android:layout_width="250.5dp"
-                        android:layout_height="50.0dp"
-                        android:id="@+id/linearLayout5"
-                        android:background="#fff"
+                        android:id="@+id/cardView1"
+                        android:layout_width="350.5dp"
+                        android:layout_height="64.0dp"
+                        p7:cardCornerRadius="@dimen/abc_action_bar_content_inset_material"
+                        p7:cardBackgroundColor="@color/white"
                         android:layout_gravity="center">
-                        <ImageView
-                            android:src="@drawable/settings"
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:minWidth="25px"
+                            android:minHeight="25px"
+                            android:layout_width="250.5dp"
+                            android:layout_height="50.0dp"
+                            android:id="@+id/linearLayout5"
+                            android:background="#fff"
+                            android:layout_gravity="center">
+                            <EditText
+                                android:inputType="textPassword"
+                                android:id="@+id/editTextPassordLogin"
+                                android:ellipsize="none"
+                                android:hint="Passord"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="#0f0f0f"
+                                android:textColorHint="#3d3c3c"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10.0dp"
+                        android:id="@+id/space1" />
+                    <Button
+                        android:text="Logg inn"
+                        android:id="@+id/Button_Login"
+                        android:background="@layout/Blue_Button"
+                        android:layout_width="230.0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/button_text"
+                        android:layout_gravity="center" />
+                    <LinearLayout
+                        android:background="@color/transparent"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="130.0dp"
+                        android:id="@+id/linearLayout3"
+                        android:minWidth="25px"
+                        android:gravity="center"
+                        android:minHeight="25px"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:text="Ny her?"
+                            android:id="@+id/textView1"
+                            android:textSize="@dimen/abc_action_bar_content_inset_material"
+                            android:gravity="center"
                             android:layout_width="wrap_content"
-                            android:layout_height="39.0dp"
-                            android:id="@+id/imageView2"
-                            android:layout_gravity="center" />
-                        <EditText
-                            android:inputType="textEmailAddress"
-                            android:id="@+id/editTextPassordLogin"
-                            android:ellipsize="none"
-                            android:hint="Passord"
-                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        <Space
+                            android:layout_width="4.5dp"
                             android:layout_height="match_parent"
-                            android:textColor="#0f0f0f"
-                            android:textColorHint="#3d3c3c" />
+                            android:id="@+id/space2" />
+                        <Button
+                            android:text="Registrer!"
+                            android:id="@+id/Button_NewUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="34.0dp"
+                            android:background="@color/transparent"
+                            style="@style/button_text" />
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="10.0dp"
-                    android:id="@+id/space1" />
-                <Button
-                    android:text="Logg inn"
-                    android:id="@+id/Button_Login"
-                    android:background="@layout/Purple_Button"
-                    android:layout_width="230.0dp"
-                    android:layout_height="wrap_content"
-                    style="@style/button_text" />
-            </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
         </ScrollView>
-    </LinearLayout>
-    <LinearLayout
-        android:background="@layout/Purple_Button"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="130.0dp"
-        android:id="@+id/linearLayout3"
-        android:minWidth="25px"
-        android:gravity="center"
-        android:minHeight="25px"
-        android:layout_weight="1">
-        <TextView
-            android:text="Ny her?"
-            android:id="@+id/textView1"
-            android:textSize="@dimen/abc_action_bar_content_inset_material"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-        <Button
-            android:text="Klikk meg!"
-            android:id="@+id/Button_NewUser"
-            android:layout_width="wrap_content"
-            android:layout_height="34.0dp"
-            android:background="#d60670" />
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

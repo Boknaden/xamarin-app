@@ -36,9 +36,13 @@
     <Compile Include="AppHelpers\BoknadenHelpers.cs" />
     <Compile Include="AppHelpers\InputValidator.cs" />
     <Compile Include="JsonHelpers\UserCredentials.cs" />
+    <Compile Include="Json\AdClasses\AdJson.cs" />
+    <Compile Include="Json\ChatClasses\ChatJson.cs" />
     <Compile Include="Json\JsonDownloader.cs" />
     <Compile Include="JsonHelpers\User.cs" />
     <Compile Include="Json\JsonUploader.cs" />
+    <Compile Include="Json\MessageClasses\MessagesJson.cs" />
+    <Compile Include="Json\UserClasses\UserJson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

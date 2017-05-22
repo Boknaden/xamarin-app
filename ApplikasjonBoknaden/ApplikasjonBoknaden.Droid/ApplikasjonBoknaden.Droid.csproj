@@ -155,8 +155,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdItemClasses\AdMiniature.cs" />
+    <Compile Include="Controllers\Ad\AdMiniature.cs" />
+    <Compile Include="AdItemClasses\ProductMiniature.cs" />
     <Compile Include="AndroidJsonHelpers\AndroidJsonHelper.cs" />
+    <Compile Include="Controllers\Chat\ChatBubleController.cs" />
+    <Compile Include="Controllers\Chat\ChatPickerController.cs" />
+    <Compile Include="DialogFragments\AdPackDialogueFragment.cs" />
+    <Compile Include="DialogFragments\ChatDialogueFragment.cs" />
+    <Compile Include="DialogFragments\Popups\PoppupMessageDialogueFragment.cs" />
+    <Compile Include="DialogFragments\Popups\PopupNotVerifiedMailDialogueFragment.cs" />
     <Compile Include="Fragments\ChatPageFragment.cs" />
     <Compile Include="Fragments\CostumParent\CostumFragment.cs" />
     <Compile Include="DialogFragments\CostumParent\CustomDialogActivity.cs" />
@@ -173,9 +180,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavedValues\UserValues.cs" />
     <Compile Include="DialogFragments\SearchFilterDialogueFragment.cs" />
-    <Compile Include="ViewPageExpanders\TreeCatalog.cs" />
-    <Compile Include="ViewPageExpanders\TreePagerAdapter.cs" />
+    <Compile Include="ViewPageExpanders\Adapters\ChatPageAdapter.cs" />
+    <Compile Include="ViewPageExpanders\Catalogs\ChatCatalog.cs" />
+    <Compile Include="ViewPageExpanders\Adapters\AdPackAdapter.cs" />
     <Compile Include="Fragments\UserPageFragment.cs" />
+    <Compile Include="ViewPageExpanders\Adapters\CustomParent\CustomPageAdapter.cs" />
+    <Compile Include="ViewPageExpanders\Catalogs\CustomParent\CustomCatalog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -222,10 +232,59 @@
     <AndroidResource Include="Resources\layout\FragmentChatPage.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\AdLayout.axml">
+    <AndroidResource Include="Resources\layout\AdMiniatureLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\AdMiniatureLayout.axml">
+    <AndroidResource Include="Resources\layout\White_Button.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Blue_Button.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Background_Blue.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AdPackLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserPageSoldItemsLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ChatPageSellingLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Red_Button.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DialogueFragmentPoppupMessageLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Background_SemiTransparentWhite.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Background_WhiteAndBorder.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DialogueFragmentAdPackMoreInfoLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AdItemLayout.axml" />
+    <AndroidResource Include="Resources\layout\ChatBuble_Seller.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Background_ChatBuble_Seller.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Background_ChatBuble_Buyer.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ChatBuble_Buyer.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DialogueFragmentChat.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ChatPickerControllLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -304,6 +363,20 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\dimens.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logohvit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\pexeldark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

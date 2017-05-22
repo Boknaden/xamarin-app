@@ -1,20 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.Support.V4.View;
-using ApplikasjonBoknaden.Droid.ViewPageExpanders.ApplikasjonBoknaden.Droid.ViewPageExpanders;
 using ApplikasjonBoknaden.Droid.ViewPageExpanders;
 using ApplikasjonBoknaden.Droid.DialogFragments;
-using ApplikasjonBoknaden.JsonHelpers;
-using RestSharp;
+using ApplikasjonBoknaden.Droid.SavedValues;
 
 namespace ApplikasjonBoknaden.Droid
 {
@@ -29,17 +20,7 @@ namespace ApplikasjonBoknaden.Droid
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-          
-            // Create your fragment here
         }
-
- 
-
-        // protected override int LayoutSetter()
-        //  {
-        //     return Resource.Layout.UserPageLayout;
-        //  }
-
         protected override int Layout()
         {
             return Resource.Layout.FragmentUserPageLayout;
@@ -54,13 +35,13 @@ namespace ApplikasjonBoknaden.Droid
 
 
 
-            sP = FragmentActivityCaller.GetSharedPreferences("SearchFilter", FileCreationMode.Private);
+            sP = CallerActivity.GetSharedPreferences("SearchFilter", FileCreationMode.Private);
             sPEditor = sP.Edit();
             TextView usernameTextview = Fragmentview.FindViewById<TextView>(Resource.Id.UserNametextView);
-            usernameTextview.Text = SavedValues.UserValues.GetSavedFirstName(sP) + " " + SavedValues.UserValues.GetSavedLastName(sP);
+            usernameTextview.Text = SavedValues.UserValues.GetValueFromToken(sP, AndroidJsonHelpers.AndroidJsonHelper.UserValuesEnums.firstname) + " " + SavedValues.UserValues.GetValueFromToken(sP, AndroidJsonHelpers.AndroidJsonHelper.UserValuesEnums.lastname);
             ViewPager viewPager = Fragmentview.FindViewById<ViewPager>(Resource.Id.viewpager);
-            TreeCatalog treeCatalog = new TreeCatalog();
-            viewPager.Adapter = new TreePagerAdapter(this.Context, treeCatalog);
+            CustomCatalog customCatalog = new CustomCatalog();
+            viewPager.Adapter = new CustomPageAdapter(this.Context, customCatalog);
 
         }
         /// <summary>
@@ -68,20 +49,8 @@ namespace ApplikasjonBoknaden.Droid
         /// </summary>
         private void LogOut()
         {
-            SavedValues.UserValues.SaveNewUserValues(new UserOld(), sPEditor);
-            FragmentActivityCaller.StartActivity(typeof(LoginActivity));
+            UserValues.SaveToken(sPEditor, "");
+            CallerActivity.StartActivity(typeof(LoginActivity));
         }
-
-   //     protected override void OnCreate(Bundle savedInstanceState)
-     //   {
-       //     base.OnCreate(savedInstanceState);
-       //     SetContentView(Resource.Layout.UserPageLayout);
-
-        //    ViewPager viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
-         //   TreeCatalog treeCatalog = new TreeCatalog();
-         //   viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
-
-            // Create your application here
-      //  }
     }
 }

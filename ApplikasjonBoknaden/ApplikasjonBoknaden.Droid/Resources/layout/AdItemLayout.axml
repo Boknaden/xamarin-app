@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#c1c1c1"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:background="#c1c1c1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1">
+        <Button
+            android:layout_width="match_parent"
+            android:background="@color/transparent"
+            android:layout_height="match_parent"
+            android:id="@+id/AdPack_button" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout7">
+            <ImageView
+                android:src="@drawable/pexelsphoto"
+                android:id="@+id/AdPack_ImageView"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="200.0dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/linearLayout_fog"
+            android:background="@color/semitransparent_black"
+            android:paddingRight="10.0dp"
+            android:paddingLeft="10.0dp"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/linearLayout7">
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/AdPack_TextFogBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout_AdPack_DateAndName"
+                    android:visibility="visible">
+                    <TextView
+                        android:text="Pakke for IT studenter"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/AdPack_PackNameText"
+                        android:textColor="#ffff"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout_AdPack_DateAndName"
+                android:visibility="visible"
+                android:layout_gravity="center">
+                <TextView
+                    android:text="350,-"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/AdPack_PriceText"
+                    android:textColor="@color/price_green"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/linearLayout3"
+                android:background="@color/app_main_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:visibility="gone" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/linearLayout_AdItem_Description"
+            android:background="#fafafa"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout_fog">
+            <TextView
+                android:text="Av Viggo Holmstedt. Denne boken inneholder mye informasjon om forskjellige bøker"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/AdPack_AdItemDescription_Textview"
+                android:textColor="#999"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            <Button
+                android:text="Meld interesse"
+                android:id="@+id/ShowInterestButton"
+                android:background="@layout/Blue_Button"
+                style="@style/button_text"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

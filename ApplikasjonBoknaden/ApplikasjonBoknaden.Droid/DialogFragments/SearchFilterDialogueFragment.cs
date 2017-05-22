@@ -1,21 +1,13 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
-using ApplikasjonBoknaden.Droid.DialogFragments;
 using ApplikasjonBoknaden.Droid.DialogFragments.CostumParent;
 
 namespace ApplikasjonBoknaden.Droid
 {
     [Activity(Label = "SearchFilterActivity")]
-    public class SearchFilterActivity : CustomDialogActivity
+    public class SearchFilterActivity : CustomDialogFragment
     {
         private ISharedPreferencesEditor sPEditor;
         private ISharedPreferences sP;
@@ -28,27 +20,10 @@ namespace ApplikasjonBoknaden.Droid
 
         protected override void InitiateFragment()
         {
-        
-    
             sPEditor = CallerActivity.GetSharedPreferences("SearchFilter", FileCreationMode.Private).Edit();
             sP = CallerActivity.GetSharedPreferences("SearchFilter", FileCreationMode.Private);
             SetButtonValues();
-
-
         }
-
-
-     //   protected override void OnCreate(Bundle savedInstanceState)
-     //   {
-    //        base.OnCreate(savedInstanceState);
-     //       ActionBar.Hide();
-    //        SetContentView(Resource.Layout.SearchFilters);
-    //        sPEditor = FragmentActivityCaller.GetSharedPreferences("SearchFilter", FileCreationMode.Private).Edit();
-     //       sP = FragmentActivityCaller.GetSharedPreferences("SearchFilter", FileCreationMode.Private);
-    //        SetButtonValues();
-
-    //    }
-
         /// <summary>
         /// Finds and sets the values on this activities buttons and other views
         /// </summary>
@@ -66,7 +41,6 @@ namespace ApplikasjonBoknaden.Droid
 
             SortAfterGroup = Dialogueview.FindViewById<Android.Widget.RadioGroup>(Resource.Id.SortaAfterGroup);
             InitialiseSortByRadioButtons();
-
         }
 
         private void InitialiseSortByRadioButtons()
@@ -80,7 +54,6 @@ namespace ApplikasjonBoknaden.Droid
                 if (b)
                 {
                     rdb.Checked = true;
-                  //  Toast.MakeText(this, rdb.Text, ToastLength.Short).Show();
                 }
                 else
                 {
@@ -92,16 +65,12 @@ namespace ApplikasjonBoknaden.Droid
         private void RadioButtonClick(object sender, EventArgs e)
         {
             RadioButton rb = (RadioButton)sender;
-           // Toast.MakeText(this, rb.Text, ToastLength.Short).Show();
             SaveSortByRadioButons();
         }
-
-
 
         private void BackToMainMenu()
         {
             CloseFragment();
-         //   StartActivity(typeof(MainMenuActivity));
         }
 
         private void SaveSortByRadioButons()
@@ -129,7 +98,6 @@ namespace ApplikasjonBoknaden.Droid
                 SavedValues.UserValues.saveBooleanPrefs(rdb.Text, rdb.Checked, sPEditor);
             }
         }
-
         private void ResetFilters()
         {
             ResetSortByRadioButtons();

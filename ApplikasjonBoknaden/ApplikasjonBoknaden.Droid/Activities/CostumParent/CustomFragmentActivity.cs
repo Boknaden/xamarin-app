@@ -1,16 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.Graphics;
-using ApplikasjonBoknaden.Droid.Helpers;
 
 namespace ApplikasjonBoknaden.Droid.DialogFragments
 {
@@ -19,45 +11,50 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
     {
         public ISharedPreferences sP;
         public ISharedPreferencesEditor sPEditor;
-        public RestSharpHelper _RestSharpHelper;
-        public TakePictureDialogueFragment takePictureFragment = null;
+        public AddNewAdPackDialogueFragment takePictureFragment = null;
+
+        protected string NewestFragmentTag = "";
+        protected Android.Support.V4.App.FragmentTransaction FT = null;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            _RestSharpHelper = new RestSharpHelper();
             sP = GetSharedPreferences("SearchFilter", FileCreationMode.Private);
             sPEditor = sP.Edit();
             base.OnCreate(savedInstanceState);
-
-            // Create your application here
         }
-
+        /// <summary>
+        /// Used when user is taking a picture
+        /// </summary>
+        /// <param name="requestCode"></param>
+        /// <param name="resultCode"></param>
+        /// <param name="data"></param>
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-
             // Make it available in the gallery
-
             Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
             Android.Net.Uri contentUri = Android.Net.Uri.FromFile(App._file);
             mediaScanIntent.SetData(contentUri);
             SendBroadcast(mediaScanIntent);
-
             // Display in ImageView. We will resize the bitmap to fit the display.
             // Loading the full sized image will consume to much memory
             // and cause the application to crash.
-
-            int height = Resources.DisplayMetrics.HeightPixels;
-            int width = takePictureFragment._imageView.Height;
-            App.bitmap = App._file.Path.LoadAndResizeBitmap(width, height);
-            if (App.bitmap != null)
-            {
-                takePictureFragment._imageView.SetImageBitmap(App.bitmap);
-                App.bitmap = null;
-            }
-
+            takePictureFragment.setProductImage();
             // Dispose of the Java side bitmap.
             GC.Collect();
+        }
+
+        protected void ChangeFragment(CostumFragment NewFragment, string newFragmentTag)
+        {
+            if (NewestFragmentTag == null || (NewestFragmentTag != null && newFragmentTag != NewestFragmentTag))
+            {
+                NewFragment.SetFragmentActivityCaller(this);
+                FT = SupportFragmentManager.BeginTransaction();
+                FT.SetCustomAnimations(Resource.Animation.design_bottom_sheet_slide_in, Resource.Animation.design_bottom_sheet_slide_out);
+                FT.Replace(Resource.Id.FragmentHolderMainMenu, NewFragment, newFragmentTag);
+                FT.Commit();
+                NewestFragmentTag = newFragmentTag;
+            }
         }
     }
 

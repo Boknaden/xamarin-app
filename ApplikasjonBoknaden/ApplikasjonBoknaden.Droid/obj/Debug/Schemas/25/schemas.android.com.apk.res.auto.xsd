@@ -2,7 +2,7 @@
 <xs:schema xmlns:app="http://schemas.android.com/apk/res-auto" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res-auto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>31/03/2017 11:24:41</xs:documentation>
+    <xs:documentation>22/05/2017 17:19:29</xs:documentation>
   </xs:annotation>
   <xs:attribute name="allowStacking">
     <xs:annotation>
@@ -257,10 +257,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -293,6 +295,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -305,6 +308,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -319,12 +323,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -1143,6 +1150,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -1161,6 +1170,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -1417,6 +1427,7 @@
             <xs:enumeration value="@string/abc_shareactionprovider_share_with" />
             <xs:enumeration value="@string/abc_shareactionprovider_share_with_application" />
             <xs:enumeration value="@string/abc_toolbar_collapse_description" />
+            <xs:enumeration value="@string/AdItemLayout_Interested" />
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/appbar_scrolling_view_behavior" />
             <xs:enumeration value="@string/bottom_sheet_behavior" />
@@ -1447,7 +1458,10 @@
             <xs:enumeration value="@string/RegisterActivity_RegisterUserButtonText" />
             <xs:enumeration value="@string/RegisterActivity_RepeatPasswordText" />
             <xs:enumeration value="@string/RegisterActivity_UsernameText" />
+            <xs:enumeration value="@string/SendNewVerification" />
             <xs:enumeration value="@string/status_bar_notification_info_overflow" />
+            <xs:enumeration value="@string/UserNotVerified" />
+            <xs:enumeration value="@string/WrongloginInfo" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -1669,6 +1683,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -1687,6 +1703,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -2083,6 +2100,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -2101,6 +2120,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -2497,6 +2517,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -2515,6 +2537,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -4181,10 +4204,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -4217,6 +4242,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -4229,6 +4255,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -4243,12 +4270,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -4576,6 +4606,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -4594,6 +4626,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -4990,6 +5023,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -5008,6 +5043,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -5264,6 +5300,7 @@
             <xs:enumeration value="@string/abc_shareactionprovider_share_with" />
             <xs:enumeration value="@string/abc_shareactionprovider_share_with_application" />
             <xs:enumeration value="@string/abc_toolbar_collapse_description" />
+            <xs:enumeration value="@string/AdItemLayout_Interested" />
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/appbar_scrolling_view_behavior" />
             <xs:enumeration value="@string/bottom_sheet_behavior" />
@@ -5294,7 +5331,10 @@
             <xs:enumeration value="@string/RegisterActivity_RegisterUserButtonText" />
             <xs:enumeration value="@string/RegisterActivity_RepeatPasswordText" />
             <xs:enumeration value="@string/RegisterActivity_UsernameText" />
+            <xs:enumeration value="@string/SendNewVerification" />
             <xs:enumeration value="@string/status_bar_notification_info_overflow" />
+            <xs:enumeration value="@string/UserNotVerified" />
+            <xs:enumeration value="@string/WrongloginInfo" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -5493,6 +5533,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -5511,6 +5553,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -6124,6 +6167,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -6142,6 +6187,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -6538,6 +6584,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -6556,6 +6604,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -7808,6 +7857,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -7826,6 +7877,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -8222,6 +8274,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -8240,6 +8294,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -8699,6 +8754,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -8717,6 +8774,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -9113,6 +9171,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -9131,6 +9191,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -9623,6 +9684,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -9641,6 +9704,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -9945,6 +10009,7 @@
             <xs:enumeration value="@string/abc_shareactionprovider_share_with" />
             <xs:enumeration value="@string/abc_shareactionprovider_share_with_application" />
             <xs:enumeration value="@string/abc_toolbar_collapse_description" />
+            <xs:enumeration value="@string/AdItemLayout_Interested" />
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/appbar_scrolling_view_behavior" />
             <xs:enumeration value="@string/bottom_sheet_behavior" />
@@ -9975,7 +10040,10 @@
             <xs:enumeration value="@string/RegisterActivity_RegisterUserButtonText" />
             <xs:enumeration value="@string/RegisterActivity_RepeatPasswordText" />
             <xs:enumeration value="@string/RegisterActivity_UsernameText" />
+            <xs:enumeration value="@string/SendNewVerification" />
             <xs:enumeration value="@string/status_bar_notification_info_overflow" />
+            <xs:enumeration value="@string/UserNotVerified" />
+            <xs:enumeration value="@string/WrongloginInfo" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -10031,10 +10099,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -10067,6 +10137,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -10079,6 +10150,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -10093,12 +10165,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@drawable/abc_ab_share_pack_mtrl_alpha" />
             <xs:enumeration value="@drawable/abc_action_bar_item_background_material" />
             <xs:enumeration value="@drawable/abc_btn_borderless_material" />
@@ -10258,6 +10333,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -10276,6 +10353,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -10751,6 +10829,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -10769,6 +10849,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -11022,10 +11103,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -11058,6 +11141,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -11070,6 +11154,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -11084,12 +11169,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -11341,6 +11429,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -11359,6 +11449,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -11612,10 +11703,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -11648,6 +11741,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -11660,6 +11754,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -11674,12 +11769,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -11931,6 +12029,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -11949,6 +12049,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -12345,6 +12446,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -12363,6 +12466,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -12619,6 +12723,7 @@
             <xs:enumeration value="@string/abc_shareactionprovider_share_with" />
             <xs:enumeration value="@string/abc_shareactionprovider_share_with_application" />
             <xs:enumeration value="@string/abc_toolbar_collapse_description" />
+            <xs:enumeration value="@string/AdItemLayout_Interested" />
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/appbar_scrolling_view_behavior" />
             <xs:enumeration value="@string/bottom_sheet_behavior" />
@@ -12649,7 +12754,10 @@
             <xs:enumeration value="@string/RegisterActivity_RegisterUserButtonText" />
             <xs:enumeration value="@string/RegisterActivity_RepeatPasswordText" />
             <xs:enumeration value="@string/RegisterActivity_UsernameText" />
+            <xs:enumeration value="@string/SendNewVerification" />
             <xs:enumeration value="@string/status_bar_notification_info_overflow" />
+            <xs:enumeration value="@string/UserNotVerified" />
+            <xs:enumeration value="@string/WrongloginInfo" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -12848,6 +12956,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -12866,6 +12976,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -13122,6 +13233,7 @@
             <xs:enumeration value="@string/abc_shareactionprovider_share_with" />
             <xs:enumeration value="@string/abc_shareactionprovider_share_with_application" />
             <xs:enumeration value="@string/abc_toolbar_collapse_description" />
+            <xs:enumeration value="@string/AdItemLayout_Interested" />
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/appbar_scrolling_view_behavior" />
             <xs:enumeration value="@string/bottom_sheet_behavior" />
@@ -13152,7 +13264,10 @@
             <xs:enumeration value="@string/RegisterActivity_RegisterUserButtonText" />
             <xs:enumeration value="@string/RegisterActivity_RepeatPasswordText" />
             <xs:enumeration value="@string/RegisterActivity_UsernameText" />
+            <xs:enumeration value="@string/SendNewVerification" />
             <xs:enumeration value="@string/status_bar_notification_info_overflow" />
+            <xs:enumeration value="@string/UserNotVerified" />
+            <xs:enumeration value="@string/WrongloginInfo" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -13713,6 +13828,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -13731,6 +13848,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -13987,6 +14105,7 @@
             <xs:enumeration value="@string/abc_shareactionprovider_share_with" />
             <xs:enumeration value="@string/abc_shareactionprovider_share_with_application" />
             <xs:enumeration value="@string/abc_toolbar_collapse_description" />
+            <xs:enumeration value="@string/AdItemLayout_Interested" />
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/appbar_scrolling_view_behavior" />
             <xs:enumeration value="@string/bottom_sheet_behavior" />
@@ -14017,7 +14136,10 @@
             <xs:enumeration value="@string/RegisterActivity_RegisterUserButtonText" />
             <xs:enumeration value="@string/RegisterActivity_RepeatPasswordText" />
             <xs:enumeration value="@string/RegisterActivity_UsernameText" />
+            <xs:enumeration value="@string/SendNewVerification" />
             <xs:enumeration value="@string/status_bar_notification_info_overflow" />
+            <xs:enumeration value="@string/UserNotVerified" />
+            <xs:enumeration value="@string/WrongloginInfo" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -14216,6 +14338,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -14234,6 +14358,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -14630,6 +14755,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -14648,6 +14775,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -15201,6 +15329,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -15219,6 +15349,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -15475,6 +15606,7 @@
             <xs:enumeration value="@string/abc_shareactionprovider_share_with" />
             <xs:enumeration value="@string/abc_shareactionprovider_share_with_application" />
             <xs:enumeration value="@string/abc_toolbar_collapse_description" />
+            <xs:enumeration value="@string/AdItemLayout_Interested" />
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/appbar_scrolling_view_behavior" />
             <xs:enumeration value="@string/bottom_sheet_behavior" />
@@ -15505,7 +15637,10 @@
             <xs:enumeration value="@string/RegisterActivity_RegisterUserButtonText" />
             <xs:enumeration value="@string/RegisterActivity_RepeatPasswordText" />
             <xs:enumeration value="@string/RegisterActivity_UsernameText" />
+            <xs:enumeration value="@string/SendNewVerification" />
             <xs:enumeration value="@string/status_bar_notification_info_overflow" />
+            <xs:enumeration value="@string/UserNotVerified" />
+            <xs:enumeration value="@string/WrongloginInfo" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -15609,10 +15744,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -15645,6 +15782,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -15657,6 +15795,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -15671,12 +15810,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -15928,6 +16070,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -15946,6 +16090,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -16342,6 +16487,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -16360,6 +16507,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -16945,6 +17093,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -16963,6 +17113,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -17216,10 +17367,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -17252,6 +17405,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -17264,6 +17418,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -17278,12 +17433,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -17535,6 +17693,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -17553,6 +17713,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -17809,6 +17970,7 @@
             <xs:enumeration value="@string/abc_shareactionprovider_share_with" />
             <xs:enumeration value="@string/abc_shareactionprovider_share_with_application" />
             <xs:enumeration value="@string/abc_toolbar_collapse_description" />
+            <xs:enumeration value="@string/AdItemLayout_Interested" />
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/appbar_scrolling_view_behavior" />
             <xs:enumeration value="@string/bottom_sheet_behavior" />
@@ -17839,7 +18001,10 @@
             <xs:enumeration value="@string/RegisterActivity_RegisterUserButtonText" />
             <xs:enumeration value="@string/RegisterActivity_RepeatPasswordText" />
             <xs:enumeration value="@string/RegisterActivity_UsernameText" />
+            <xs:enumeration value="@string/SendNewVerification" />
             <xs:enumeration value="@string/status_bar_notification_info_overflow" />
+            <xs:enumeration value="@string/UserNotVerified" />
+            <xs:enumeration value="@string/WrongloginInfo" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -18038,6 +18203,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -18056,6 +18223,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -18309,10 +18477,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -18345,6 +18515,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -18357,6 +18528,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -18371,12 +18543,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -18628,6 +18803,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -18646,6 +18823,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -19356,6 +19534,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -19374,6 +19554,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -19770,6 +19951,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -19788,6 +19971,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -20213,10 +20397,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -20249,6 +20435,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -20261,6 +20448,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -20275,12 +20463,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -21660,10 +21851,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -21696,6 +21889,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -21708,6 +21902,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -21722,12 +21917,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -21979,6 +22177,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -21997,6 +22197,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -22250,10 +22451,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -22286,6 +22489,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -22298,6 +22502,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -22312,12 +22517,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -23571,6 +23779,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -23589,6 +23799,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -23842,10 +24053,12 @@
             <xs:enumeration value="@color/abc_secondary_text_material_light" />
             <xs:enumeration value="@color/accent_material_dark" />
             <xs:enumeration value="@color/accent_material_light" />
+            <xs:enumeration value="@color/app_main_color" />
             <xs:enumeration value="@color/background_floating_material_dark" />
             <xs:enumeration value="@color/background_floating_material_light" />
             <xs:enumeration value="@color/background_material_dark" />
             <xs:enumeration value="@color/background_material_light" />
+            <xs:enumeration value="@color/Black" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_dark" />
             <xs:enumeration value="@color/bright_foreground_disabled_material_light" />
             <xs:enumeration value="@color/bright_foreground_inverse_material_dark" />
@@ -23878,6 +24091,7 @@
             <xs:enumeration value="@color/highlighted_text_material_light" />
             <xs:enumeration value="@color/hint_foreground_material_dark" />
             <xs:enumeration value="@color/hint_foreground_material_light" />
+            <xs:enumeration value="@color/LightBlack" />
             <xs:enumeration value="@color/material_blue_grey_800" />
             <xs:enumeration value="@color/material_blue_grey_900" />
             <xs:enumeration value="@color/material_blue_grey_950" />
@@ -23890,6 +24104,7 @@
             <xs:enumeration value="@color/material_grey_800" />
             <xs:enumeration value="@color/material_grey_850" />
             <xs:enumeration value="@color/material_grey_900" />
+            <xs:enumeration value="@color/price_green" />
             <xs:enumeration value="@color/primary_dark_material_dark" />
             <xs:enumeration value="@color/primary_dark_material_light" />
             <xs:enumeration value="@color/primary_material_dark" />
@@ -23904,12 +24119,15 @@
             <xs:enumeration value="@color/secondary_text_default_material_light" />
             <xs:enumeration value="@color/secondary_text_disabled_material_dark" />
             <xs:enumeration value="@color/secondary_text_disabled_material_light" />
+            <xs:enumeration value="@color/semitransparent_black" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_dark" />
             <xs:enumeration value="@color/switch_thumb_disabled_material_light" />
             <xs:enumeration value="@color/switch_thumb_material_dark" />
             <xs:enumeration value="@color/switch_thumb_material_light" />
             <xs:enumeration value="@color/switch_thumb_normal_material_dark" />
             <xs:enumeration value="@color/switch_thumb_normal_material_light" />
+            <xs:enumeration value="@color/transparent" />
+            <xs:enumeration value="@color/white" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -24161,6 +24379,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -24179,6 +24399,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -24575,6 +24796,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -24593,6 +24816,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />
@@ -25037,6 +25261,8 @@
             <xs:enumeration value="@drawable/iconprofile" />
             <xs:enumeration value="@drawable/iconsettings" />
             <xs:enumeration value="@drawable/larch" />
+            <xs:enumeration value="@drawable/logo" />
+            <xs:enumeration value="@drawable/logohvit" />
             <xs:enumeration value="@drawable/maple" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_dark" />
             <xs:enumeration value="@drawable/mr_dialog_material_background_light" />
@@ -25055,6 +25281,7 @@
             <xs:enumeration value="@drawable/mr_ic_play_light" />
             <xs:enumeration value="@drawable/notification_template_icon_bg" />
             <xs:enumeration value="@drawable/oak" />
+            <xs:enumeration value="@drawable/pexeldark" />
             <xs:enumeration value="@drawable/pexelsphoto" />
             <xs:enumeration value="@drawable/pine" />
             <xs:enumeration value="@drawable/settings" />

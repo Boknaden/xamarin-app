@@ -1,20 +1,12 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using ApplikasjonBoknaden.Droid.DialogFragments.CostumParent;
 
 namespace ApplikasjonBoknaden.Droid.DialogFragments
 {
-    public class RegisterNewUserDialogueFragment : CustomDialogActivity
+    public class RegisterNewUserDialogueFragment : CustomDialogFragment
     {
         protected enum NeededValues
         {
@@ -45,24 +37,10 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
         protected EditText InputFieldPassword = null;
         protected EditText InputFieldRepeatedPassword = null;
 
+        protected ImageView BackButton = null;
+
 
         protected ValidationResponse ValidationResponder = new ValidationResponse();
-
-
-     //   public override void OnCreate(Bundle savedInstanceState)
-      //  {
-      //      base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
-     //   }
-
-       // public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-       // {
-            // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-         //   return inflater.Inflate(Resource.Layout.RegisterNewUserFragmentLayout, container, false);
-            //return base.OnCreateView(inflater, container, savedInstanceState);
-     //   }
 
         protected override int LayoutSetter()
         {
@@ -71,19 +49,12 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
 
         protected override void InitiateFragment()
         {
-           // base.OnCreate(savedInstanceState);
-
-            // Create your application here
-            //   SetContentView(Resource.Layout.RegisterNewUser);
             SetButtonValues();
-
             foreach (NeededValues value in Enum.GetValues(typeof(NeededValues)))
             {
                 string neededvalue = value.ToString();
                 ListOfNeededValues.Add(neededvalue);
             }
-       //     Toast.MakeText(this, "Registrering fullført", ToastLength.Long).Show();
-         //   UploadNewUser();
         }
         /// <summary>
         /// Finds and sets the values on this activities buttons and other views
@@ -97,6 +68,19 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
             InputFieldPassword = Dialogueview.FindViewById<Android.Widget.EditText>(Resource.Id.editTextPassword);
             InputFieldRepeatedPassword = Dialogueview.FindViewById<Android.Widget.EditText>(Resource.Id.editTextRepeatedPassword);
 
+            BackButton = Dialogueview.FindViewById<ImageView>(Resource.Id.ImageViewCardClose);
+            BackButton.Touch += (object sender, View.TouchEventArgs e) =>
+            {
+                if (e.Event.Action == MotionEventActions.Up)
+                {
+                    BackButton.Alpha = 1.0f;
+                    CloseFragment();
+                }
+                if (e.Event.Action == MotionEventActions.Down)
+                {
+                    BackButton.Alpha = 0.4f;
+                }
+            };
 
             Android.Widget.Button RegisterButton = Dialogueview.FindViewById<Android.Widget.Button>(Resource.Id.RegisterUserButton);
             RegisterButton.Click += delegate {
@@ -162,14 +146,11 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
             }
             UploadNewUser();
         }
-
         private async void UploadNewUser()
         {
-            ShowToast("Registrerer");
+            ShowToast("Velkommen" +" " +  WritenUsername +"!", true);
             await Json.JsonUploader.RegisterNewUser(WritenUsername, WritenFirstname, WritenLastname, WritenPassword, WrittenEmail, WritenPhoneNR, WritenCourseID);
-           
              CloseFragment();
-            //  await JsonDownloader.RegisterNewUser(WritenUsername, WrittenEmail, WritenFirstname, WritenLastname, WritenPassword);
         }
     }
 }

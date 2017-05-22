@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ApplikasjonBoknaden
 {
@@ -11,22 +7,21 @@ namespace ApplikasjonBoknaden
     {
         public static string[] NotAcceptecUsernames = new string[] { "Fuck", "fuck", "Faen", "faen", "Helvete", "helvete", "Fitte", "fitte", "Satan", "satan", "Hitler", "hitler", "Hore", "hore" };
 
-
-        public static string CleansedToken(string token, int removefront, int removeback)
+        /// <summary>
+        /// Removes "dirt" from token
+        /// </summary>
+        /// <param name="token"></param>
+        /// <param name="removefront"></param>
+        /// <param name="removeback"></param>
+        /// <returns></returns>
+        public static string CleansedToken(string token)
         {
             //removes the start of the token string
-            token = token.Substring(removefront);
+            token = token.Substring(25);
             //Removes the end of the token string
-            if (removeback != 0)
-            {
-                token = token.Remove(token.Length - removeback);
-            }
-
+            token = token.Remove(token.Length - 2);
             return token;
         }
-
-        //  public static string expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-
         /// <summary>
         /// Compares two strings and returns true or false, based on if they are of the same value
         /// </summary>
@@ -44,7 +39,6 @@ namespace ApplikasjonBoknaden
                 return false;
             }
         }
-
         /// <summary>
         ///Checks if given string is a valid Email Source: http://stackoverflow.com/questions/1365407/c-sharp-code-to-validate-email-address
         /// </summary>
@@ -70,7 +64,6 @@ namespace ApplikasjonBoknaden
                 return false;
             }
         }
-
         /// <summary>
         /// Checks if given string contains any bad words. If it does, it returns the bad word. If not, it returns Null.
         /// </summary>
@@ -87,7 +80,6 @@ namespace ApplikasjonBoknaden
             }
             return null;
         }
-
         /// <summary>
         /// Checks if string is Empty or null
         /// </summary>
