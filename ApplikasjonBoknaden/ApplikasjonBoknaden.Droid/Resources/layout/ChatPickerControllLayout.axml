@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:visibility="visible">
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -35,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="Eirik Slottedalen"
+                    android:text="Test -navn"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:id="@+id/ChatBuble_Textview"
                     android:textColor="@color/white"
@@ -66,34 +67,5 @@
             android:background="#c1c1c1"
             android:layout_width="match_parent"
             android:layout_height="2.0dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/linearLayout_ChatPickerControllButton"
-        android:background="@layout/Background_ChatBuble_Seller"
-        android:paddingRight="5.0dp"
-        android:paddingLeft="5.0dp"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_alignParentRight="true"
-        android:paddingTop="10.0dp"
-        android:paddingBottom="10.0dp"
-        android:clickable="true"
-        android:layout_marginRight="10.0dp"
-        android:layout_marginLeft="10.0dp"
-        android:layout_marginTop="10.0dp"
-        android:layout_marginBottom="10.0dp">
-        <TextView
-            android:text="Eirik Slottedalen"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/ChatBuble_Textview"
-            android:textColor="@color/white"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
     </LinearLayout>
 </RelativeLayout>

@@ -1,7 +1,5 @@
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\ApplikasjonBoknaden.Droid.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\ApplikasjonBoknaden.Droid.pdb
-C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\ApplikasjonBoknaden.Droid.apk
-C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\ApplikasjonBoknaden.Droid-Signed.apk
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\ApplikasjonBoknaden.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\FormsViewGroup.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\Microsoft.IdentityModel.Logging.dll
@@ -41,7 +39,6 @@ C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBokn
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\ApplikasjonBoknaden.Droid.csprojResolveAssemblyReference.cache
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\ApplikasjonBoknaden.Droid.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\ApplikasjonBoknaden.Droid.pdb
-C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\bin\ApplikasjonBoknaden.Droid.apk
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\activityloginlayout.xml
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\dialoguefragmentsearchfilterslayout.xml
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\camera.xml
@@ -124,7 +121,6 @@ C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBokn
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\RestSharp.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\RestSharp.xml
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\fragmentchatpage.xml
-C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\adlayout.xml
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\adminiaturelayout.xml
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\values\dimens.xml
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\white_button.xml
@@ -140,5 +136,18 @@ C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBokn
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\drawable\logohvit.png
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\dialoguefragmentpoppupmessagelayout.xml
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\background_semitransparentwhite.xml
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\background_whiteandborder.xml
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\dialoguefragmentadpackmoreinfolayout.xml
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\chatbuble_seller.xml
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\background_chatbuble_seller.xml
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\background_chatbuble_buyer.xml
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\chatbuble_buyer.xml
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\dialoguefragmentchat.xml
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\layout\chatpickercontrolllayout.xml
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\drawable-xxxhdpi\pexeldark.png
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\res\drawable\ikonapp.png
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\BoknadenApplikasjon.BoknadenApplikasjon.apk
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\BoknadenApplikasjon.BoknadenApplikasjon-Signed.apk
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\bin\BoknadenApplikasjon.BoknadenApplikasjon.apk
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\ApplikasjonBoknaden.Droid.dll.mdb
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\bin\Release\ApplikasjonBoknaden.Droid.dll.mdb

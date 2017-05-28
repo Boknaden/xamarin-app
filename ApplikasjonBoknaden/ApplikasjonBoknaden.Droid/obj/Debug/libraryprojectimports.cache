@@ -2,12 +2,14 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Debug\__library_projects__\FFImageLoading.Platform\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Debug\__library_projects__\RestSharp\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Debug\__library_projects__\ZXingNetMobile\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\FFImageLoading.Platform\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\RestSharp\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\assets</ResolvedAssetDirectory>
@@ -15,6 +17,7 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Debug\__library_projects__\FFImageLoading.Platform.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Debug\__library_projects__\RestSharp.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>

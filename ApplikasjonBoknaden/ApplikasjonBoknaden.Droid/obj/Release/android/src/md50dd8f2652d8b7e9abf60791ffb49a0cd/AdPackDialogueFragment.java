@@ -2,7 +2,7 @@ package md50dd8f2652d8b7e9abf60791ffb49a0cd;
 
 
 public class AdPackDialogueFragment
-	extends md5f62a2229ea213c5fdf30c20d749a8a8a.CustomDialogActivity
+	extends md5f62a2229ea213c5fdf30c20d749a8a8a.CustomDialogFragment
 	implements
 		mono.android.IGCUserPeer
 {

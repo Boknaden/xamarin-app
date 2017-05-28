@@ -15,6 +15,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using ApplikasjonBoknaden.Json;
 using System.Net.Http;
+using System.Threading.Tasks;
+using ApplikasjonBoknaden.Droid.SavedValues;
 
 namespace ApplikasjonBoknaden.Droid.DialogFragments
 {
@@ -87,6 +89,9 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
         private LinearLayout AdDisplayer;
         private Json.Ad NewAd = new Json.Ad();
         private Bitmap CurrentProductImage;
+
+        private List<Java.IO.File> _images;
+
         //private List<AdItem>
 
 
@@ -353,19 +358,53 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
                 CurrentProductImage = App.bitmap;
                 _imageView.SetImageBitmap(App.bitmap);
                 _SelectedAdminiature.setImage(App.bitmap);
-                _SelectedProduct.image = App.bitmap;
+                _SelectedProduct.image = new AdItemImage();
+                _SelectedProduct.image.imagefile = App._file;
+                _SelectedProduct.image.file = App.bitmap;
+                //_SelectedProduct.image.bitmapimage = App.bitmap;
+                //App.bitmap.CompressAsync(Bitmap.CompressFormat.Png, 85, outStream);
                 App.bitmap = null;
             }
         }
 
-        private async void GetNewestAdsFromDatabase()
+        // private async void GetNewestAdsFromDatabase()
+        //  {
+        //  Json.RootObject root = await JsonDownloader.GetItemsFromDatabase();
+        //   if (root != null)
+        //   {
+        //      AddItems(root);
+        //    }
+
+        //   }
+
+        private async Task UploadImages(Ad ad)
         {
-            Json.RootObject root = await JsonDownloader.GetItemsFromDatabase();
-            if (root != null)
+            foreach (Aditem ai in ad.aditems)
             {
-                AddItems(root);
+                int i = 1;
+
+                if (ai.image.file != null)
+                {
+                    //string Response = 
+                        await Task.Run(() => Json.JsonUploader.upload(SavedValues.UserValues.GetSavedToken(CallerActivity.sP), ai.image));
+                //    System.Diagnostics.Debug.WriteLine(Response + "Dette er resultatet ny");
+                }
+
+                // System.Net.Http.HttpResponseMessage Response = await Task.Run(() => Json.JsonUploader.AddNewImage(SavedValues.UserValues.GetSavedToken(CallerActivity.sP), ai.image));
+                // PoppupDialogueFragment APDF = new PoppupDialogueFragment();
+                //  if (Response.IsSuccessStatusCode)
+                // {
+                //     APDF.Show(CallerActivity.SupportFragmentManager, "dialog", CallerActivity, "Lastet opp bilde", true);
+                // }
+                // else
+                // {
+                //     APDF.Show(CallerActivity.SupportFragmentManager, "dialog", CallerActivity, "Noe gikk galt med bilde", false);
+                //  }
+ 
+                ai.image.imageid = i;
             }
 
+            //return i;
         }
 
         private void AddItems(Json.RootObject root)
@@ -648,6 +687,9 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
 
         private async void Publish(Ad ad)
         {
+            await UploadImages(ad);
+
+
             if (AdPackNameText != null && AdPackDescriptionText != null)
             {
                 ad.adname = AdPackNameText.Text;

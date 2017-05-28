@@ -30,10 +30,11 @@ C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBokn
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\mscorlib.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Runtime.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.ComponentModel.Composition.dll
-C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Diagnostics.Debug.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Threading.Tasks.dll
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Diagnostics.Debug.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Collections.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Text.RegularExpressions.dll
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Runtime.Extensions.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Text.Encoding.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Diagnostics.Tracing.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.IO.dll
@@ -47,7 +48,6 @@ C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBokn
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Security.Cryptography.Cng.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Xml.ReaderWriter.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Security.Cryptography.X509Certificates.dll
-C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Runtime.Extensions.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Threading.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Xml.XDocument.dll
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden.Droid\obj\Release\android\assets\System.Xml.Linq.dll

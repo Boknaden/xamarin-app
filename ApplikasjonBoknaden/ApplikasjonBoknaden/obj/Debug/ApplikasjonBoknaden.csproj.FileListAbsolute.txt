@@ -48,5 +48,6 @@ C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBokn
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden\obj\Debug\ApplikasjonBoknaden.csproj.App.config
+C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden\bin\Debug\Windows.winmd
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden\obj\Debug\ApplikasjonBoknaden.dll.mdb
 C:\Users\cam-b\Documents\ApplikasjonBoknaden\ApplikasjonBoknaden\ApplikasjonBoknaden\bin\Debug\ApplikasjonBoknaden.dll.mdb

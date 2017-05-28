@@ -18,7 +18,7 @@ namespace ApplikasjonBoknaden.Json.Messages
         public string email { get; set; }
     }
 
-    public class Row
+    public class ChatMessage
     {
         public int chatmessageid { get; set; }
         public int userid { get; set; }
@@ -31,17 +31,12 @@ namespace ApplikasjonBoknaden.Json.Messages
         public User user { get; set; }
     }
 
-    public class ChatMessages
-    {
-        public int count { get; set; }
-        public List<Row> rows { get; set; }
-    }
-
     public class RootObject
     {
         public bool success { get; set; }
         public int limit { get; set; }
         public int page { get; set; }
-        public ChatMessages chatMessages { get; set; }
+        public int count { get; set; }
+        public List<ChatMessage> chatMessages { get; set; }
     }
 }

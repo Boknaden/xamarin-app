@@ -12,7 +12,7 @@ namespace ApplikasjonBoknaden.Droid.Controllers.Chat
 {
     class ChatBubleController : RelativeLayout
     {
-        public Json.Chat.Chat _Chat;
+        //public Json.Chat.Chat _Chat;
         private View Controller_View;
         private ViewGroup _Parent;
         private ViewGroup AdPack_Parent;

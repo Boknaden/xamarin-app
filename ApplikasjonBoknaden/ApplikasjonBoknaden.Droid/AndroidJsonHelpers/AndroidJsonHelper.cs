@@ -9,7 +9,7 @@ namespace ApplikasjonBoknaden.Droid.AndroidJsonHelpers
 {
     public static class AndroidJsonHelper
     {
-        public enum UserValuesEnums { userid, username, firstname, lastname, email, exp, verified };
+        public enum UserValuesEnums { userid, username, firstname, lastname, email, exp, verified, imageurl };
 
         /// <summary>
         /// Cleans the given token and gets user values from it.

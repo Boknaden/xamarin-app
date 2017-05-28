@@ -7,7 +7,7 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="200.0dp"
+        android:layout_height="300.0dp"
         android:id="@+id/relativeLayout1"
         android:visibility="visible">
         <Button
@@ -15,6 +15,11 @@
             android:background="@color/transparent"
             android:layout_height="match_parent"
             android:id="@+id/AdPack_button" />
+        <FFImageLoading.Views.ImageViewAsync
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/AdPack_AsyncImageView"
+            android:visibility="visible" />
         <LinearLayout
             android:orientation="vertical"
             android:minWidth="25px"
@@ -26,7 +31,7 @@
                 android:src="@drawable/pexelsphoto"
                 android:id="@+id/AdPack_ImageView"
                 android:scaleType="centerCrop"
-                android:visibility="visible"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="200.0dp" />
         </LinearLayout>

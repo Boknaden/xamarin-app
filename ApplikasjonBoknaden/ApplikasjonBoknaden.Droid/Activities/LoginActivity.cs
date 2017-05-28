@@ -18,6 +18,7 @@ namespace ApplikasjonBoknaden.Droid
         private EditText LoginEditText;
         private EditText PasswordEditText;
         private UserOld User = new UserOld();
+    
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -26,7 +27,17 @@ namespace ApplikasjonBoknaden.Droid
             ActionBar.Hide();
             SetContentView(Resource.Layout.ActivityLoginLayout);
             SetButtonValues();
+            ShowBetaInfo();
         }
+
+        private void ShowBetaInfo()
+        {
+            PoppupDialogueFragment APDF = new PoppupDialogueFragment();
+            APDF.Show(SupportFragmentManager, "dialog", this, "Denne appen er fortsatt under utvikling! Registrer deg og utforsk.", false);
+        }
+
+   
+
         /// <summary>
         /// Finds and sets the values on this activities buttons and other views
         /// </summary>
@@ -53,6 +64,7 @@ namespace ApplikasjonBoknaden.Droid
         /// </summary>
         private async void NewLogin()
         {
+            ShowLoadingPopup("Logger inn");
             Json.LoginInfo lf = await Task.Run(() => Json.JsonUploader.AutenticateUser(User));
 
             if (!lf.WrongLoginInfo)
@@ -62,16 +74,19 @@ namespace ApplikasjonBoknaden.Droid
                 if (UserIsVerified(User))
                 {
                     UserValues.SaveToken(sPEditor, token);
+                    CloseLoadingPopup();
                     StartActivity(typeof(MainMenuActivity));
                 }
                 else
                 {
+                    CloseLoadingPopup();
                     PopupNotVerifiedMailDialogueFragment APDF = new PopupNotVerifiedMailDialogueFragment(SupportFragmentManager, "dialog", this, Resources.GetString(Resource.String.UserNotVerified), Resources.GetString(Resource.String.SendNewVerification), token);
                 }
             }
             else
             {
                 PoppupDialogueFragment APDF = new PoppupDialogueFragment();
+                CloseLoadingPopup();
                 APDF.Show(SupportFragmentManager, "dialog", this, Resources.GetString(Resource.String.WrongloginInfo), false);
             }
         }

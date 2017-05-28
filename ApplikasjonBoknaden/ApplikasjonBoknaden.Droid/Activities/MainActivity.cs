@@ -5,6 +5,8 @@ using ApplikasjonBoknaden.JsonHelpers;
 using ApplikasjonBoknaden.Droid.SavedValues;
 using Android.Content.PM;
 using System.Threading.Tasks;
+using ApplikasjonBoknaden.Json;
+using ApplikasjonBoknaden.Droid.AndroidJsonHelpers;
 
 namespace ApplikasjonBoknaden.Droid
 {
@@ -20,11 +22,21 @@ namespace ApplikasjonBoknaden.Droid
             base.OnCreate(bundle);
             ActionBar.Hide();
 
-            if (UserValues.GetSavedToken(GetSharedPreferences("SearchFilter", FileCreationMode.Private)) != string.Empty)
+            string token = UserValues.GetSavedToken(GetSharedPreferences("SearchFilter", FileCreationMode.Private));
+            System.Diagnostics.Debug.WriteLine(token);
+            //return;
+            if (token != string.Empty)
             {
-                savedUser = UserValues.GetSavedUserValues(GetSharedPreferences("SearchFilter", FileCreationMode.Private));
-                TryToLogIn(savedUser);
-            }else
+
+               // if (UserIsVerified(User))
+                //{
+                //}
+
+                    // savedUser = UserValues.GetSavedUserValues(GetSharedPreferences("SearchFilter", FileCreationMode.Private));
+                    TryToLogIn(savedUser);
+                    //StartActivity(typeof(LoginActivity));
+            }
+            else
             {
                 StartActivity(typeof(LoginActivity));
             }

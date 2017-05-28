@@ -6,6 +6,14 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using ApplikasjonBoknaden.JsonHelpers;
+using System.Net.Http.Headers;
+using ApplikasjonBoknaden.Json.Chat;
+using System.IO;
+using Android.Graphics;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using Android.OS;
+using static Android.Provider.SyncStateContract;
 
 namespace ApplikasjonBoknaden.Json
 {
@@ -20,6 +28,196 @@ namespace ApplikasjonBoknaden.Json
         private static string UsersURL = "http://146.185.164.20:57483/users"; //http://146.185.164.20:57483/users //http://10.0.0.58:57483/users
         private static string AdURL = "http://146.185.164.20:57483/ads";
         private static string VerifyURL = "http://146.185.164.20:57483/verifyuser";
+        private static string messagesURL = "http://146.185.164.20:57483/messages";
+        private static string ImagesURL = "http://146.185.164.20:57484/image";
+
+        public static async void UploadImage(string header, AdItemImage file)
+        {
+            //variable
+          //  var url = "http://hallpassapi.jamsocialapps.com/api/profile/UpdateProfilePicture/";
+            //var file = "path/to/file.ext";
+
+            try
+            {
+                byte[] bitmapData;
+                var stream = new MemoryStream();
+                file.file.Compress(Bitmap.CompressFormat.Jpeg, 0, stream);
+                bitmapData = stream.ToArray();
+                var filecontent = new ByteArrayContent(bitmapData);
+
+                //read file into upfilebytes array
+                //var upfilebytes = System.IO.File.ReadAllBytes(file);
+
+                //create new HttpClient and MultipartFormDataContent and add our file, and StudentId
+                HttpClient client = new HttpClient();
+                MultipartFormDataContent content = new MultipartFormDataContent();
+                ByteArrayContent baContent = new ByteArrayContent(bitmapData);
+                StringContent studentIdContent = new StringContent("2123");
+                
+                content.Add(baContent, "file");
+                content.Add(studentIdContent, "StudentId");
+                content.Headers.Add("boknaden-verify", header);
+                //content.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
+
+                //upload MultipartFormDataContent content async and store response in response var
+                var response =
+                    await client.PostAsync(ImagesURL, content);
+
+                //read response result as a string async into json var
+                var responsestr = response.Content.ReadAsStringAsync().Result;
+
+                //debug
+                System.Diagnostics.Debug.WriteLine(responsestr);
+
+            }
+            catch (Exception e)
+            {
+                //debug
+                System.Diagnostics.Debug.WriteLine("Exception Caught: " + e.ToString());
+
+                return;
+            }
+        }
+
+        public static async void upload(string header, AdItemImage ai)
+ {
+            try
+            {
+                byte[] bitmapData;
+                var stream = new MemoryStream();
+                ai.file.Compress(Bitmap.CompressFormat.Jpeg, 85, stream);
+                bitmapData = stream.ToArray();
+                var filecontent = new ByteArrayContent(bitmapData);
+
+                if (filecontent == null)
+                {
+                    System.Diagnostics.Debug.WriteLine("Den er tom!");
+                }
+
+                // StreamContent scontent = new StreamContent(stream);
+                filecontent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+                {
+                    FileName = "image.jpg",
+                    Name = "file"
+                };
+                filecontent.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
+                var client = new HttpClient();
+                var multi = new MultipartFormDataContent();
+                multi.Add(filecontent);
+                multi.Headers.Add("boknaden-verify", header);
+                //client.BaseAddress = new Uri(Constants.API_ROOT_URL);
+                var result = client.PostAsync(ImagesURL, multi).Result;
+                System.Diagnostics.Debug.WriteLine(result.ReasonPhrase);
+                var result1 = await result.Content.ReadAsStringAsync();
+                System.Diagnostics.Debug.WriteLine(result1 + "Den ligger her");
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e);
+            }
+  }
+
+        public static async Task<String> UploadBitmapAsync(string header, AdItemImage file)
+        {
+
+            byte[] bitmapData;
+            var stream = new MemoryStream();
+            file.file.Compress(Bitmap.CompressFormat.Jpeg, 0, stream);
+            bitmapData = stream.ToArray();
+            var filecontent = new ByteArrayContent(bitmapData);
+
+
+            filecontent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
+            filecontent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+            {
+               Name = "file",
+                FileName = "my_uploaded_image.jpg"
+           };
+
+            string boundary = "---8d0f01e6b3b5dafaaadaad";
+            MultipartFormDataContent multipartContent = new MultipartFormDataContent(boundary);
+            multipartContent.Add(filecontent);
+            multipartContent.Headers.Add("boknaden-verify", header);
+            multipartContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
+
+            HttpClient httpClient = new HttpClient();
+            HttpResponseMessage response = await httpClient.PostAsync(ImagesURL, multipartContent);
+            System.Diagnostics.Debug.WriteLine(response + "Dette er responsen");
+            var result = await response.Content.ReadAsStringAsync();
+            System.Diagnostics.Debug.WriteLine(result + "Dette er resultatet nyny");
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                System.Diagnostics.Debug.WriteLine(content + "Det funka");
+                return content;
+            }
+            return null;
+        }
+
+        public static async Task<HttpResponseMessage> AddNewImage(string header, AdItemImage image)
+        {
+            try
+            {
+                // NewMessageTest me = new NewMessageTest();
+
+              //  byte[] bytes = image.imagefile.
+               // dados.put("File", DatatypeConverter.printBase64Binary(bytes))
+
+                string jsonData = JsonConvert.SerializeObject(image.imagefile);
+               // Java.IO.File jsonData = JsonConvert.SerializeObject(image.imagefile);
+              //  System.Diagnostics.Debug.WriteLine(jsonData);
+
+                using (var client = new HttpClient())
+                {
+                    var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                    //var content = new ByteArrayContent(image.imagefile);
+                    content.Headers.Add("boknaden-verify", header);
+                    HttpResponseMessage response = await client.PostAsync(ImagesURL, content);
+                    var result = await response.Content.ReadAsStringAsync();
+                    System.Diagnostics.Debug.WriteLine(result + "Dette er resultatet");
+
+                    return response;
+                }
+            }
+            catch (Exception exception)
+            {
+                System.Diagnostics.Debug.WriteLine("Nay");
+                System.Diagnostics.Debug.WriteLine("CAUGHT EXCEPTION:");
+                System.Diagnostics.Debug.WriteLine(exception);
+                return null;
+            }
+        }
+
+        public static async Task<HttpResponseMessage> AddNewMessage(string header, string message, NewMessageTest nmt)
+        {
+            try
+            {
+               // NewMessageTest me = new NewMessageTest();
+
+
+                string jsonData = JsonConvert.SerializeObject(nmt);
+                System.Diagnostics.Debug.WriteLine(jsonData);
+
+                using (var client = new HttpClient())
+                {
+                    var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                    content.Headers.Add("boknaden-verify", header);
+                    HttpResponseMessage response = await client.PostAsync(messagesURL, content);
+                    var result = await response.Content.ReadAsStringAsync();
+                    System.Diagnostics.Debug.WriteLine(result);
+
+                    return response;
+                }
+            }
+            catch (Exception exception)
+            {
+                System.Diagnostics.Debug.WriteLine("Nay");
+                System.Diagnostics.Debug.WriteLine("CAUGHT EXCEPTION:");
+                System.Diagnostics.Debug.WriteLine(exception);
+                return null;
+            }
+        }
+
         /// <summary>
         /// Asks the API to send a new verificationmail to given user (Gets userinfo from given token)
         /// </summary>
@@ -67,7 +265,11 @@ namespace ApplikasjonBoknaden.Json
 
                 foreach (Json.Aditem item in sentad.aditems)
                 {
+                    //item.imageid = 1;
+
+                    item.image.imageid = 1;
                     newad.aditems.Add(item);
+
                 }
 
                 string jsonData = JsonConvert.SerializeObject(newad);
@@ -79,7 +281,7 @@ namespace ApplikasjonBoknaden.Json
                     content.Headers.Add("boknaden-verify", header);
                     HttpResponseMessage response = await client.PostAsync(AdURL, content);
                     var result = await response.Content.ReadAsStringAsync();
-                    System.Diagnostics.Debug.WriteLine(result);
+                    System.Diagnostics.Debug.WriteLine(result +"Kommer hit");
 
                     return response;
                 }
@@ -212,6 +414,16 @@ namespace ApplikasjonBoknaden.Json
         }
     }
 
+    public class NewMessageTest
+    {
+        //public Recipient _Recipient;
+        public string message = "";
+       // public Json.Chat.Chat _Chat;
+      //  public int ChatId;
+        public int recipientid;
+        public int chatid;
+    }
+
     public class NewAdTest
     {
         public int userid { get; set; }
@@ -236,8 +448,8 @@ namespace ApplikasjonBoknaden.Json
         public int aditemid { get; set; }
         public int userid { get; set; }
         public int adid { get; set; }
-        public object imageid { get; set; }
-        public int price { get; set; }
+       // public Image image { get; set; }
+        public long price { get; set; }
         public string text { get; set; }
         public string description { get; set; }
         public object isbn { get; set; }
@@ -246,8 +458,18 @@ namespace ApplikasjonBoknaden.Json
         public object buyerid { get; set; }
         public string createddate { get; set; }
         public string updateddate { get; set; }
-        public object image { get; set; }
+        public AdItemImage image { get; set; }
     }
+
+    public class AdItemImage
+    {
+        public string imageurl { get; set; }
+        public string title { get; set; }
+        public int imageid { get; set; }
+        public Java.IO.File imagefile { get; set; }
+        public Bitmap file { get; set; }
+    }
+
 
     public class University
     {

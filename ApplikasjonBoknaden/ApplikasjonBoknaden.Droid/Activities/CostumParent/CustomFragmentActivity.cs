@@ -3,6 +3,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Graphics;
+using ApplikasjonBoknaden.Droid.DialogFragments.Popups;
 
 namespace ApplikasjonBoknaden.Droid.DialogFragments
 {
@@ -12,6 +13,7 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
         public ISharedPreferences sP;
         public ISharedPreferencesEditor sPEditor;
         public AddNewAdPackDialogueFragment takePictureFragment = null;
+        private PopupLoadingSignDialogueFragment _PopupLoadingSignDialogueFragment;
 
         protected string NewestFragmentTag = "";
         protected Android.Support.V4.App.FragmentTransaction FT = null;
@@ -55,6 +57,21 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
                 FT.Commit();
                 NewestFragmentTag = newFragmentTag;
             }
+        }
+
+        protected void ShowLoadingPopup(string text)
+        {
+            if (_PopupLoadingSignDialogueFragment == null)
+            {
+                _PopupLoadingSignDialogueFragment = new PopupLoadingSignDialogueFragment();
+            }
+            //PoppupDialogueFragment APDF = new PoppupDialogueFragment();
+            _PopupLoadingSignDialogueFragment.Show(SupportFragmentManager, "dialog", this, text, false);
+        }
+
+        protected void CloseLoadingPopup()
+        {
+            _PopupLoadingSignDialogueFragment.Dismiss();
         }
     }
 

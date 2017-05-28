@@ -69,7 +69,15 @@
                 android:layout_height="match_parent"
                 android:textColor="#0f0f0f"
                 android:textColorHint="#3d3c3c"
-                android:gravity="center" />
+                android:gravity="center"
+                android:layout_weight="1" />
+            <Button
+                android:text="Send"
+                android:id="@+id/Button_SendMessage"
+                android:background="@layout/Blue_Button"
+                style="@style/button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

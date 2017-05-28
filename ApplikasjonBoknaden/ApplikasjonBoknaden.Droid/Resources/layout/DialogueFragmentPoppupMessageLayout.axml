@@ -22,10 +22,11 @@
                 android:orientation="vertical"
                 android:minWidth="25px"
                 android:minHeight="25px"
-                android:id="@+id/linearLayout4"
+                android:id="@+id/linearLayout_TextAndCheckMark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:visibility="visible">
                 <TextView
                     android:text="Bruker er ikke verifisert"
                     android:id="@+id/TextViewPopupMessage"

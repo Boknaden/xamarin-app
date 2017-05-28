@@ -5,7 +5,7 @@
   <xs:import schemaLocation="schemas.android.com.tools.xsd" namespace="http://schemas.android.com/tools" />
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>22/05/2017 17:19:29</xs:documentation>
+    <xs:documentation>28/05/2017 20:36:47</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -82,6 +82,9 @@
       <xs:element ref="RadioGroup" />
       <xs:element ref="TextSwitcher" />
       <xs:element ref="fragment" />
+      <xs:element ref="FFImageLoading.Views.ImageViewAsync" />
+      <xs:element ref="FFImageLoading.Views.ManagedImageView" />
+      <xs:element ref="FFImageLoading.Cross.MvxImageLoadingView" />
       <xs:element ref="ZXing.Mobile.ZXingSurfaceView" />
       <xs:element ref="ZXing.Mobile.ZxingOverlayView" />
       <xs:element ref="com.xamarin.forms.platform.android.FormsViewGroup" />
@@ -348,31 +351,10 @@
     <xs:attribute ref="android:pointerIcon" />
     <xs:attribute ref="android:forceHasOverlappingRendering" />
     <xs:attribute ref="tools:visibility" />
-    <xs:attribute ref="android:layout_toLeftOf" />
-    <xs:attribute ref="android:layout_toRightOf" />
-    <xs:attribute ref="android:layout_above" />
-    <xs:attribute ref="android:layout_below" />
-    <xs:attribute ref="android:layout_alignBaseline" />
-    <xs:attribute ref="android:layout_alignLeft" />
-    <xs:attribute ref="android:layout_alignTop" />
-    <xs:attribute ref="android:layout_alignRight" />
-    <xs:attribute ref="android:layout_alignBottom" />
-    <xs:attribute ref="android:layout_alignParentLeft" />
-    <xs:attribute ref="android:layout_alignParentTop" />
-    <xs:attribute ref="android:layout_alignParentRight" />
-    <xs:attribute ref="android:layout_alignParentBottom" />
-    <xs:attribute ref="android:layout_centerInParent" />
-    <xs:attribute ref="android:layout_centerHorizontal" />
-    <xs:attribute ref="android:layout_centerVertical" />
-    <xs:attribute ref="android:layout_alignWithParentIfMissing" />
-    <xs:attribute ref="android:layout_toStartOf" />
-    <xs:attribute ref="android:layout_toEndOf" />
-    <xs:attribute ref="android:layout_alignStart" />
-    <xs:attribute ref="android:layout_alignEnd" />
-    <xs:attribute ref="android:layout_alignParentStart" />
-    <xs:attribute ref="android:layout_alignParentEnd" />
     <xs:attribute ref="android:layout_width" />
     <xs:attribute ref="android:layout_height" />
+    <xs:attribute ref="android:layout_weight" />
+    <xs:attribute ref="android:layout_gravity" />
     <xs:attribute ref="android:layout_margin" />
     <xs:attribute ref="android:layout_marginLeft" />
     <xs:attribute ref="android:layout_marginTop" />
@@ -1464,31 +1446,10 @@
     <xs:attribute ref="android:fragmentAllowEnterTransitionOverlap" />
     <xs:attribute ref="android:fragmentAllowReturnTransitionOverlap" />
     <xs:attribute ref="tools:layout" />
-    <xs:attribute ref="android:layout_toLeftOf" />
-    <xs:attribute ref="android:layout_toRightOf" />
-    <xs:attribute ref="android:layout_above" />
-    <xs:attribute ref="android:layout_below" />
-    <xs:attribute ref="android:layout_alignBaseline" />
-    <xs:attribute ref="android:layout_alignLeft" />
-    <xs:attribute ref="android:layout_alignTop" />
-    <xs:attribute ref="android:layout_alignRight" />
-    <xs:attribute ref="android:layout_alignBottom" />
-    <xs:attribute ref="android:layout_alignParentLeft" />
-    <xs:attribute ref="android:layout_alignParentTop" />
-    <xs:attribute ref="android:layout_alignParentRight" />
-    <xs:attribute ref="android:layout_alignParentBottom" />
-    <xs:attribute ref="android:layout_centerInParent" />
-    <xs:attribute ref="android:layout_centerHorizontal" />
-    <xs:attribute ref="android:layout_centerVertical" />
-    <xs:attribute ref="android:layout_alignWithParentIfMissing" />
-    <xs:attribute ref="android:layout_toStartOf" />
-    <xs:attribute ref="android:layout_toEndOf" />
-    <xs:attribute ref="android:layout_alignStart" />
-    <xs:attribute ref="android:layout_alignEnd" />
-    <xs:attribute ref="android:layout_alignParentStart" />
-    <xs:attribute ref="android:layout_alignParentEnd" />
     <xs:attribute ref="android:layout_width" />
     <xs:attribute ref="android:layout_height" />
+    <xs:attribute ref="android:layout_weight" />
+    <xs:attribute ref="android:layout_gravity" />
     <xs:attribute ref="android:layout_margin" />
     <xs:attribute ref="android:layout_marginLeft" />
     <xs:attribute ref="android:layout_marginTop" />
@@ -1497,6 +1458,36 @@
     <xs:attribute ref="android:layout_marginStart" />
     <xs:attribute ref="android:layout_marginEnd" />
     <xs:attribute ref="android:style" />
+  </xs:complexType>
+  <xs:element name="FFImageLoading.Views.ImageViewAsync" type="FFImageLoading.Views.ImageViewAsync">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: FFImageLoading.Views.ImageViewAsync</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="FFImageLoading.Views.ImageViewAsync">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FFImageLoading.Views.ManagedImageView" type="FFImageLoading.Views.ManagedImageView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: FFImageLoading.Views.ManagedImageView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="FFImageLoading.Views.ManagedImageView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FFImageLoading.Cross.MvxImageLoadingView" type="FFImageLoading.Cross.MvxImageLoadingView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: FFImageLoading.Cross.MvxImageLoadingView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="FFImageLoading.Cross.MvxImageLoadingView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageView" />
+    </xs:complexContent>
   </xs:complexType>
   <xs:element name="ZXing.Mobile.ZXingSurfaceView" type="ZXing.Mobile.ZXingSurfaceView">
     <xs:annotation>

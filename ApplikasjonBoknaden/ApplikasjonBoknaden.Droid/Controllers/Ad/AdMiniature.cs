@@ -3,6 +3,10 @@ using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
+using ApplikasjonBoknaden.Json;
+using FFImageLoading;
+using FFImageLoading.Views;
+using Java.IO;
 
 namespace ApplikasjonBoknaden.Droid.AdItemClasses
 {
@@ -19,7 +23,8 @@ namespace ApplikasjonBoknaden.Droid.AdItemClasses
         private TextView AdPack_PackNameText;
         private TextView AdPack_AdItemDescriptionText;
         private ImageView AdPack_ImageView;
-        private int PackPrice = 0;
+        private ImageViewAsync AdPack_AsyncImageView;
+        private long PackPrice = 0;
 
         private ViewGroup _Parent;
 
@@ -139,6 +144,7 @@ namespace ApplikasjonBoknaden.Droid.AdItemClasses
             ShowInterestButton = AdPack_View.FindViewById<Button>(Resource.Id.ShowInterestButton);
             ShowInterestButton.Visibility = ViewStates.Gone;
             AdPack_ImageView = AdPack_View.FindViewById<ImageView>(Resource.Id.AdPack_ImageView);
+            AdPack_AsyncImageView = AdPack_View.FindViewById<ImageViewAsync>(Resource.Id.AdPack_AsyncImageView);
 
             AdPack_PriceText = AdPack_View.FindViewById<TextView>(Resource.Id.AdPack_PriceText);
             AdPack_PackNameText = AdPack_View.FindViewById<TextView>(Resource.Id.AdPack_PackNameText);
@@ -150,15 +156,81 @@ namespace ApplikasjonBoknaden.Droid.AdItemClasses
                 AdPack_SellerText = AdPack_View.FindViewById<TextView>(Resource.Id.AdPack_SellerText);
                 AdPack_SellerText.Text = AdPack_Ad.user.firstname + " " + AdPack_Ad.user.lastname;
 
+            
+                if (AdPack_Ad.adname.Length > 15)
+                {
+                    string s = BoknadenHelpers.CutAndDotString(AdPack_Ad.adname, 11);
+                   // string s = AdPack_Ad.adname.Substring(0, 11);
+                    AdPack_Ad.adname = s + "...";
+                }
                 AdPack_PackNameText.Text = AdPack_Ad.adname;
+
                 AdPack_PriceText.Text = PackPrice.ToString() + ",- ";
                 InitiateAsAdPack();
+
+                if (AdPack_Ad.aditems[0].image != null)
+                {
+                    Aditem aitem = AdPack_Ad.aditems[0];
+                    if (aitem.image != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine(aitem.image.imageurl);
+                        ImageService.Instance.LoadUrl(aitem.image.imageurl)
+                        .LoadingPlaceholder("/Resources/drawable/noimageimage")
+                        .ErrorPlaceholder("/Resources/drawable/noimageimage")
+                        .Retry(3, 200)
+                        .Into(AdPack_AsyncImageView);
+                    }else
+                    {
+                        System.Diagnostics.Debug.WriteLine("Henter fra fil");
+                        ImageService.Instance.LoadFile("drawable://noimageimage");
+                    }
+                }
+                else
+                {
+
+                    System.Diagnostics.Debug.WriteLine("Henter fra fil");
+                    //ImageService.Instance.LoadFile("drawable://" + Resource.Drawable.noimageimage);
+                    //InputStream stream = Resource.Drawable.noimageimage;
+                    ImageService.Instance.LoadCompiledResource("noimage").Into(AdPack_AsyncImageView);
+                }
 
             }
             else
             {
                 AdPack_PackNameText.Text = _Product.text;
                 AdPack_PriceText.Text = _Product.price.ToString() + ",-";
+                //string url = _Product.image.GetType().GetProperty("imageurl");
+                // var url = _Product.image;
+                //var s1 = AndroidJsonHelpers.AndroidJsonHelper.GetPropValue(_Product.image, "imageurl");
+                // System.Reflection.PropertyInfo pi = _Product.image.GetType().GetProperty("imageurl");
+                if (_Product.image != null)
+                {
+                    System.Diagnostics.Debug.WriteLine(_Product.image.imageurl);
+                    Android.Net.Uri url = Android.Net.Uri.Parse(_Product.image.imageurl);
+                    AdPack_ImageView.SetImageURI(url);
+                    //ImageService ims = new ImageService();
+                    ImageService.Instance.LoadUrl(_Product.image.imageurl)
+                    .LoadingPlaceholder("loading.png")
+                    .ErrorPlaceholder("error.png")
+                    .Retry(3, 200)
+                    .Into(AdPack_AsyncImageView);
+                }
+             
+   
+            
+                //   if (pi != null)
+                //  {
+                //      String imageurl = (String)(pi.GetValue(_Product.image, null));
+                //    System.Diagnostics.Debug.WriteLine(imageurl + "Dette er urlen");
+                //  }
+
+                //var image
+                // string imageURL = _Product.image.imageurl;
+                // AdPack_ImageView
+                //AdItemImage image 
+                //Android.Net.Uri url = Android.Net.Uri.Parse(_);
+                //AdPack_ImageView.SetImageURI(url);
+                //AdPack_ImageView.SetImageBitmap(imageBitmap);
                 InitiateAsAdItem();
             }
 

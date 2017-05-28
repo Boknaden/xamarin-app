@@ -100,6 +100,8 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "ApplikasjonBoknaden.Droid.dll" comes first in this list. */
 		"ApplikasjonBoknaden.Droid.dll",
 		"ApplikasjonBoknaden.dll",
+		"FFImageLoading.dll",
+		"FFImageLoading.Platform.dll",
 		"FormsViewGroup.dll",
 		"Microsoft.IdentityModel.Logging.dll",
 		"Microsoft.IdentityModel.Tokens.dll",

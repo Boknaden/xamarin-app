@@ -3,6 +3,7 @@ using Android.Views;
 using ApplikasjonBoknaden.Json;
 using Android.Widget;
 using ApplikasjonBoknaden.Droid.Fragments;
+using static ApplikasjonBoknaden.Droid.Controllers.Chat.ChatBubleController;
 
 namespace ApplikasjonBoknaden.Droid.ViewPageExpanders
 {
@@ -74,50 +75,40 @@ namespace ApplikasjonBoknaden.Droid.ViewPageExpanders
             if (_Root == null)
             {
                 _Root = await JsonDownloader.GetChatsFromDB(SavedValues.UserValues.GetSavedToken(_ChatPageFragment.GetCallerActivity().sP));
+
+                if (_Root != null)
+                {
+                    if (_Root.chats.Count > 0)
+                    {
+
+                        AddBuyingChats(_Root);
+                        AddSellingChats(_Root);
+                    }
+                }
             }
-            AddBuyingChats(_Root);
-            AddSellingChats(_Root);
+         
         }
 
         private void AddBuyingChats(Json.Chat.RootObject root)
         {
-            if (root != null)
+            foreach (Json.Chat.Chat c in root.chats)
             {
-                foreach (Json.Chat.Chat c in root.chats)
+                if (c.Initiator.userid.ToString() == UserID)
                 {
-                    if (c.Initiator.userid.ToString() == UserID)
-                    {
-                        Controllers.Chat.ChatPickerController cpc = new Controllers.Chat.ChatPickerController(context, BuyingChatsDisplayer, c);
-                        cpc.GetLinearLayoutButton().Click += delegate {
-                            ShowChat(c.chatid);
-                        };
-                    }
-                  
+                    Controllers.Chat.ChatPickerController cpc = new Controllers.Chat.ChatPickerController(context, BuyingChatsDisplayer, c, _ChatPageFragment.GetCallerActivity(), ChatBubleType.Byer);
                 }
             }
         }
 
         private void AddSellingChats(Json.Chat.RootObject root)
         {
-            if (root != null)
+            foreach (Json.Chat.Chat c in root.chats)
             {
-                foreach (Json.Chat.Chat c in root.chats)
+                if (c.Initiator.userid.ToString() != UserID)
                 {
-                    if (c.Initiator.userid.ToString() != UserID)
-                    {
-                        Controllers.Chat.ChatPickerController cpc = new Controllers.Chat.ChatPickerController(context, BuyingChatsDisplayer, c);
-                        cpc.GetLinearLayoutButton().Click += delegate {
-                            ShowChat(c.chatid);
-                        };
-                    }
+                    Controllers.Chat.ChatPickerController cpc = new Controllers.Chat.ChatPickerController(context, SellingChatsDisplayer, c, _ChatPageFragment.GetCallerActivity(), ChatBubleType.Seller);
                 }
             }
-        }
-
-        private void ShowChat(int chatID)
-        {
-           // ChatDialogueFragment APDF = new ChatDialogueFragment();
-            //APDF.Show(CallerActivity.SupportFragmentManager, "dialog", CallerActivity, chatID);
         }
     }
 }

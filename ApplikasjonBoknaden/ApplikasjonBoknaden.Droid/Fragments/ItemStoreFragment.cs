@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Android.Views;
 using Android.Widget;
 using ApplikasjonBoknaden.Json;
+using Newtonsoft.Json;
 
 namespace ApplikasjonBoknaden.Droid.DialogFragments
 {
@@ -72,6 +73,14 @@ namespace ApplikasjonBoknaden.Droid.DialogFragments
         {
             AddLoadingSign();
             Json.RootObject root = await JsonDownloader.GetItemsFromDatabase();
+            foreach (Ad a in root.ads)
+            {
+                foreach (Aditem adi in a.aditems)
+                {
+                    System.Diagnostics.Debug.WriteLine(adi.image);
+                }
+            }
+     
             if (root != null)
             {
                 AddItems(root);

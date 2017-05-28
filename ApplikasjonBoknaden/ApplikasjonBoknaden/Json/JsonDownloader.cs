@@ -20,6 +20,7 @@ namespace ApplikasjonBoknaden
 
                 HttpClient client = new HttpClient();
                 HttpResponseMessage response = await client.GetAsync("http://146.185.164.20:57483/ads");
+                
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
 
@@ -91,7 +92,7 @@ namespace ApplikasjonBoknaden
                     {
                         string result = await response.Content.ReadAsStringAsync();
                         publicFeed = JsonConvert.DeserializeObject<Json.Messages.RootObject>(result);
-                        System.Diagnostics.Debug.WriteLine(result);
+                        System.Diagnostics.Debug.WriteLine(result + "Denne her");
                         return publicFeed;
                     }
                     else
@@ -126,27 +127,5 @@ namespace ApplikasjonBoknaden
                 return !string.IsNullOrEmpty(jsonData) ? JsonConvert.DeserializeObject<T>(jsonData) : default(T);
             }
         }
-    }
-
-    public class RootObject
-    {
-        public string payload { get; set; }
-    }
-
-    public class RootObject2
-    {
-        public string username { get; set; }
-    }
-
-    public class RootObject1
-    {
-        public string Name { get; set; }
-        public string Address1 { get; set; }
-        public int Zip { get; set; }
-        public string City { get; set; }
-        public string Phone { get; set; }
-        public double Lat { get; set; }
-        public double Lon { get; set; }
-        public string Link { get; set; }
     }
 }

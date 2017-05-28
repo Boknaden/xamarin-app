@@ -6,6 +6,25 @@ namespace ApplikasjonBoknaden
     public static class BoknadenHelpers
     {
         public static string[] NotAcceptecUsernames = new string[] { "Fuck", "fuck", "Faen", "faen", "Helvete", "helvete", "Fitte", "fitte", "Satan", "satan", "Hitler", "hitler", "Hore", "hore" };
+        /// <summary>
+        /// Cuts and dots the given string. Indicating for readers that the string is bigger then what is shown.
+        /// </summary>
+        /// <param name="stringToCut"></param>
+        /// <param name="cutLength"></param>
+        /// <returns></returns>
+        public static string CutAndDotString(string stringToCut, int cutLength)
+        {
+            if (stringToCut.Length > cutLength)
+            {
+                string s = stringToCut.Substring(0, cutLength);
+                s = s + "...";
+                return s;
+            }
+            else
+            {
+                return stringToCut;
+            }
+        }
 
         /// <summary>
         /// Removes "dirt" from token
